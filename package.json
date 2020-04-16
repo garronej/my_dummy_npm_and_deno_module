@@ -1,5 +1,6 @@
 {
     "name": "my-dummy-npm-and-deno-module",
+    "version": "0.1.0",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/garronej/my-dummy-npm-and-deno-module.git"
@@ -20,7 +21,7 @@
         "test": "node ./dist/test && deno ./deno_dist/test/deno_index.ts"
     },
     "devDependencies": {
-        "denoify": "file:../denoify",
+        "denoify": "garronej/denoify",
         "typescript": "^3.8.3",
         "@types/js-yaml": "^3.12.3",
         "@types/node": "^8.10.59",

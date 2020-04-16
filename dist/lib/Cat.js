@@ -39,7 +39,7 @@ exports.__esModule = true;
 var runExclusive = require("run-exclusive");
 var runExclusive_1 = require("run-exclusive/dist/lib/runExclusive");
 var js_yaml_1 = require("js-yaml");
-console.log(js_yaml_1.load('hello: world')); // => prints { hello: "world" }
+var ts_md5_1 = require("ts-md5");
 var Cat = /** @class */ (function () {
     function Cat() {
         var _this = this;
@@ -47,30 +47,35 @@ var Cat = /** @class */ (function () {
         this.color = "BLACK";
         this.gender = "FEMALE";
         this.size = "SMALL";
-        this.run = runExclusive.buildMethod(function () { return __awaiter(_this, void 0, void 0, function () {
-            var time;
+        this.spell = runExclusive.buildMethod(function (alphabet, letter) { return __awaiter(_this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0:
-                        time = ~~(Math.random() * 10);
-                        return [4 /*yield*/, new Promise(function (resolve) { return setTimeout(resolve, time); })];
+                    case 0: return [4 /*yield*/, new Promise(function (resolve) { return setTimeout(function () { return resolve(); }, Math.random() * 100); })];
                     case 1:
                         _a.sent();
-                        return [2 /*return*/, time];
+                        alphabet[0] += letter;
+                        return [2 /*return*/];
                 }
             });
         }); });
-        this.makeSound = runExclusive_1.buildMethod(function () { return __awaiter(_this, void 0, void 0, function () {
+        this.spell2 = runExclusive_1.buildMethod(function (alphabet, letter) { return __awaiter(_this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, new Promise(function (resolve) { return setTimeout(resolve, 100); })];
+                    case 0: return [4 /*yield*/, new Promise(function (resolve) { return setTimeout(function () { return resolve(); }, Math.random() * 100); })];
                     case 1:
                         _a.sent();
-                        return [2 /*return*/, "SOUND"];
+                        alphabet[0] += letter;
+                        return [2 /*return*/];
                 }
             });
         }); });
     }
+    Cat.prototype.testJsYaml = function () {
+        return js_yaml_1.load('hello: world');
+    };
+    Cat.prototype.testMd5 = function () {
+        return ts_md5_1.Md5.hashStr("Foo bar");
+    };
     return Cat;
 }());
 exports.Cat = Cat;

@@ -1,5 +1,5 @@
 
-import { Cat } from "../lib";
+import { Cat } from "../lib/index.ts";
 
 const cat = new Cat();
 

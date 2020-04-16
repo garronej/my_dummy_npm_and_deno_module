@@ -4,7 +4,9 @@ export declare class Cat implements interfaces.Cat {
     color: "BLACK";
     gender: "FEMALE";
     size: "SMALL";
-    run: () => Promise<number>;
-    makeSound: () => Promise<string>;
+    testJsYaml(): any;
+    testMd5(): string | Int32Array | undefined;
+    spell: (alphabet: [string], letter: string) => Promise<void>;
+    spell2: (alphabet: [string], letter: string) => Promise<void>;
 }
 export declare function createCat(): interfaces.Cat;

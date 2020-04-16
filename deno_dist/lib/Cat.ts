@@ -1,10 +1,9 @@
 
 import * as interfaces from "./interfaces/index.ts";
-import * as runExclusive from "https://deno.land/x/run_eclusive/mod.ts";
-import { buildMethod } from "https://deno.land/x/run_eclusive/deno_dist/lib/runExclusive.ts";
-import { load } from "https://deno.land/x/js_yaml_port/js-yaml.js";
-
-console.log(load('hello: world')); // => prints { hello: "world" }
+import * as runExclusive from "https://raw.githubusercontent.com/garronej/run_exclusive/v2.1.12/mod.ts";
+import { buildMethod } from "https://raw.githubusercontent.com/garronej/run_exclusive/v2.1.12/deno_dist/lib/runExclusive.ts";
+import { load } from "https://deno.land/x/js_yaml_port@3.13.1/js-yaml.js";
+import { Md5 } from "https://raw.githubusercontent.com/garronej/ts-md5/v1.2.7/mod.ts";
 
 export class Cat implements interfaces.Cat {
 
@@ -13,26 +12,34 @@ export class Cat implements interfaces.Cat {
     gender = "FEMALE" as const;
     size = "SMALL" as const;
 
+    testJsYaml() {
+        return load('hello: world');
+    }
 
-    run = runExclusive.buildMethod(async (): Promise<number> => {
-
-        const time = ~~(Math.random() * 10);
-
-        await new Promise(resolve => setTimeout(resolve, time));
-
-        return time;
-
-    });
-
-    makeSound = buildMethod(async (): Promise<string> => {
+    testMd5(){
+        return Md5.hashStr("Foo bar");
+    }
 
 
-        await new Promise(resolve => setTimeout(resolve, 100));
+    spell = runExclusive.buildMethod(
+        async (alphabet: [string], letter: string): Promise<void>=> {
 
-        return "SOUND";
+            await new Promise<void>(resolve=>setTimeout(()=>resolve(), Math.random() * 100));
 
-    });
+            alphabet[0]+= letter;
 
+        }
+    );
+
+    spell2 = buildMethod(
+        async (alphabet: [string], letter: string): Promise<void>=> {
+
+            await new Promise<void>(resolve=> setTimeout(()=>resolve(), Math.random() * 100));
+
+            alphabet[0]+= letter;
+
+        }
+    );
 
 }
 

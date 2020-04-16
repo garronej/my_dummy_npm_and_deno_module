@@ -24,7 +24,7 @@ export class Cat implements interfaces.Cat {
     spell = runExclusive.buildMethod(
         async (alphabet: [string], letter: string): Promise<void>=> {
 
-            await new Promise<void>(setTimeout(()=>resolve(), Math.random() * 100));
+            await new Promise<void>(resolve=>setTimeout(()=>resolve(), Math.random() * 100));
 
             alphabet[0]+= letter;
 
@@ -34,7 +34,7 @@ export class Cat implements interfaces.Cat {
     spell2 = buildMethod(
         async (alphabet: [string], letter: string): Promise<void>=> {
 
-            await new Promise<void>(setTimeout(()=>resolve(), Math.random() * 100));
+            await new Promise<void>(resolve=> setTimeout(()=>resolve(), Math.random() * 100));
 
             alphabet[0]+= letter;
 

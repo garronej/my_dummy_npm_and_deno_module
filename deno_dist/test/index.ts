@@ -1,9 +1,11 @@
-
 import "../lib/index.ts";
-import { ParallelHasher } from 'ts-md5/dist/parallel_hasher (unmet dev dependency)';
 
-let hasher = new ParallelHasher('/path/to/ts-md5/dist/md5_worker.js');
+//fs is part of the standard node library, it will not work on deno but denoify wont throw.
+import * as fs from "fs DENOIFY: DEPENDENCY UNMET (STANDARD)"; fs;
 
-hasher.hash("fooBarBaz").then(function (result) {
-    console.log('md5 of fileBlob is', result);
-});
+
+//colors is in dev dependency so denoify will not throw throws when it came across it.
+import "colors DENOIFY: DEPENDENCY UNMET (DEV DEPENDENCY)"
+
+import "./test1.ts";
+
