@@ -1,7 +1,7 @@
 
 # my-dummy-npm-and-deno-module
 
-A demo project that serve as a tutorial on how to setup denoify.
+A demo project that serve as a tutorial on how to setup [denoify](https://github.com/garronej/denoify).
 
 NOTE: For a new module name favor '_' over '-' in the module name as it is
 a deno requirement not to use '_'
