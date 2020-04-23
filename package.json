@@ -1,9 +1,9 @@
 {
     "name": "my-dummy-npm-and-deno-module",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/garronej/my-dummy-npm-and-deno-module.git"
+        "url": "git+https://github.com/garronej/my_dummy_npm_and_deno_module.git"
     },
     "main": "./dist/lib/index.js",
     "dependencies": {
@@ -12,7 +12,7 @@
         "ts-md5": "github:garronej/ts-md5#v1.2.7"
     },
     "denoPorts": {
-        "js-yaml": "https://deno.land/x/js_yaml_port@3.13.1/js-yaml.js"
+        "js-yaml": "https://deno.land/x/js_yaml_port/js-yaml.js"
     },
     "scripts": {
         "tsc": "npx tsc",
@@ -21,7 +21,7 @@
         "test": "node ./dist/test && deno ./deno_dist/test/deno_index.ts"
     },
     "devDependencies": {
-        "denoify": "garronej/denoify",
+        "denoify": "file:..",
         "typescript": "^3.8.3",
         "@types/js-yaml": "^3.12.3",
         "@types/node": "^8.10.59",

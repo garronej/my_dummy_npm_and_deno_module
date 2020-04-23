@@ -8,6 +8,8 @@ console.log(cat);
 console.log(cat.testJsYaml());
 console.log(cat.testMd5());
 
+console.log(cat.pathJoin(".", "path", "to", "file.txt"));
+
 (async () => {
 
     const alphabet: [string] = ["abc"];

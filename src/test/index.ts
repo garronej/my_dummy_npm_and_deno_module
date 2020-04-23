@@ -1,8 +1,9 @@
 import "../lib";
 
-//fs is part of the standard node library, it will not work on deno but denoify wont throw.
-import * as fs from "fs"; fs;
-
+//url is a node builtin that do not have a port for deno yet, 
+//it will not work on deno but denoify wont throw.
+//checkout here how it is transformed:  https://github.com/garronej/my_dummy_npm_and_deno_module/blob/v0.2.0/deno_dist/test/index.ts
+import * as fs from "url"; fs;
 
 //colors is in dev dependency so denoify will not throw throws when it came across it.
 import "colors"
