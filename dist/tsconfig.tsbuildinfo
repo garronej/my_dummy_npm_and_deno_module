@@ -221,6 +221,11 @@
         "signature": "fb5ecc8c4a19c95880e572d93a16ddd27eed34c97562c74b52cab893da861389",
         "affectsGlobalScope": false
       },
+      "../node_modules/@types/comment-json/index.d.ts": {
+        "version": "c401118ea6c6daa9f196013b0622c602d4faec565bb1cc6ca751d2a8fc295498",
+        "signature": "c401118ea6c6daa9f196013b0622c602d4faec565bb1cc6ca751d2a8fc295498",
+        "affectsGlobalScope": false
+      },
       "../node_modules/@types/node/globals.d.ts": {
         "version": "da55f3fbb4189aec7caf4da308901f7b9d1e916337d9dfbdbcd162a46a835bdd",
         "signature": "da55f3fbb4189aec7caf4da308901f7b9d1e916337d9dfbdbcd162a46a835bdd",
@@ -469,6 +474,10 @@
       "configFilePath": "../tsconfig.json"
     },
     "referencedMap": {
+      "../node_modules/@types/comment-json/index.d.ts": [
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
       "../node_modules/@types/js-yaml/index.d.ts": [
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts"
@@ -946,6 +955,10 @@
       ]
     },
     "exportedModulesMap": {
+      "../node_modules/@types/comment-json/index.d.ts": [
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
       "../node_modules/@types/js-yaml/index.d.ts": [
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts"
@@ -1378,6 +1391,7 @@
       ]
     },
     "semanticDiagnosticsPerFile": [
+      "../node_modules/@types/comment-json/index.d.ts",
       "../node_modules/@types/js-yaml/index.d.ts",
       "../node_modules/@types/node/async_hooks.d.ts",
       "../node_modules/@types/node/base.d.ts",
