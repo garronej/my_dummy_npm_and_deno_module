@@ -169,7 +169,7 @@ Note that in this repo we run the tests with the ``--allow-read`` because we use
 
 ## Create a new GitHub release every time you publish on npm.
 
-Just after running ``> npm publish`` got to your GitHub repo pages -> release -> create new release ( or draft ne release ) and tag version enter ``0.1.1`` matching the current version in your ``package.json`` file.
+Just after running ``> npm publish`` got to your GitHub repo pages -> release -> create new release ( or draft ne release ) and tag version enter ``0.2.0`` matching the current version in your ``package.json`` file.
 
 ## (Optional) Publish your module on deno.land
 
@@ -198,12 +198,12 @@ import { Cat } from "my-dummy-npm-and-deno-module"
 And on deno with:
 
 ```typescript
-import { Cat } from "https://deno.land/x/my_dummy_npm_and_deno_module@0.1.1/mod.ts";
+import { Cat } from "https://deno.land/x/my_dummy_npm_and_deno_module@0.2.0/mod.ts";
 ```
 or if you haven't published on Deno.land:
 
 ```typescript
-import { Cat } from "https://raw.github.com/garronej/my_dummy_npm_and_deno_module/0.1.1/mod.ts";
+import { Cat } from "https://raw.github.com/garronej/my_dummy_npm_and_deno_module/0.2.0/mod.ts";
 ```
 
 On top of that this module can now be used as a dependency in other modules that uses ``denoify``.
