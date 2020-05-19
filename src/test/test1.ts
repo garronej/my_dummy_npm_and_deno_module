@@ -1,5 +1,8 @@
 
 import { Cat } from "../lib";
+import { getPackageJsonName } from "../tools/getPackageJsonName";
+
+console.log(`package.json "name" filed value ( to test some Node builtins ): ${getPackageJsonName()}`);
 
 const cat = new Cat();
 

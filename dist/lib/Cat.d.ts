@@ -8,5 +8,6 @@ export declare class Cat implements interfaces.Cat {
     testMd5(): string | Int32Array | undefined;
     spell: (alphabet: [string], letter: string) => Promise<void>;
     spell2: (alphabet: [string], letter: string) => Promise<void>;
+    pathJoin(...args: string[]): string;
 }
 export declare function createCat(): interfaces.Cat;

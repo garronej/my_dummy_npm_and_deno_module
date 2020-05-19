@@ -18,13 +18,15 @@
         "tsc": "npx tsc",
         "denoify": "npx denoify",
         "build": "npm run tsc && npm run denoify",
-        "test": "node ./dist/test && deno ./deno_dist/test/deno_index.ts"
+        "test:node": "node ./dist/test",
+        "test:deno": "deno run --allow-read ./deno_dist/test/deno_index.ts",
+        "test": "npm run test:node && npm run test:deno"
     },
     "devDependencies": {
-        "denoify": "file:..",
+        "denoify": "file:../denoify",
         "typescript": "^3.8.3",
         "@types/js-yaml": "^3.12.3",
-        "@types/node": "^8.10.59",
+        "@types/node": "^10.0.0",
         "colors": "^1.4.0"
     }
 }

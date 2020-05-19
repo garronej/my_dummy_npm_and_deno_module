@@ -4,8 +4,6 @@ import * as runExclusive from "run-exclusive";
 import { buildMethod } from "run-exclusive/dist/lib/runExclusive";
 import { load } from "js-yaml";
 import { Md5 } from "ts-md5";
-
-//Note builtin that is listed in knownPorts.json
 import * as path from "path";
 
 export class Cat implements interfaces.Cat {
