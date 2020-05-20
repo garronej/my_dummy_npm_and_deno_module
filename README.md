@@ -185,6 +185,38 @@ insert (at the right position, alphabetical ordering):
   },
 ```
 
+# Accessing files on the disk.
+
+Keep in mind that in Deno there is no ``node_modules`` sitting on the disk at runtime.  
+
+Let's assume for example that you would like to load a ``database.json`` file located 
+at the root of your project. You would write something like this:  
+
+``src/index.ts``
+```typescript
+import * as fs from "fs";
+import * as path from "path";
+import { TextDecoder } from "util";
+
+export function getDatabase(): Record<string,any> {
+    return JSON.parse(
+        new TextDecoder("utf-8").decode(
+            fs.readFileSync(
+                path.join(
+                    __dirname,
+                    "..", "database.json"
+                )
+            )
+        )
+    );
+}
+```
+
+This will work on both Node and Deno when you run your tests but once 
+your module published this won’t work on Deno anymore for the same reason 
+it won’t work in the Browser, the ``database.json`` file is present 
+on the disk at runtime.  
+
 # Conclusion
 
 It is now possible to use your module on node using ( assuming you have published it with ``npm publish`` ):
