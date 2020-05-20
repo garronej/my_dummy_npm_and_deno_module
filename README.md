@@ -10,7 +10,7 @@ a deno requirement not to use '\_'
 
 This demo project depends on three modules:
 
-- ``"js-yaml"``: Is is already known by denoify, it is present in : [known-ports.jsonc](https://github.com/garronej/denoify/blob/master/known-port.jsonc),  
+- ``"js-yaml"``: Is is already known by denoify, it is present in : [known-ports.jsonc](https://github.com/garronej/denoify/blob/master/known-ports.jsonc),  
   There is nothing to do for ``js-yaml``. Let us assume however, for the sake of the tutorial that is is not know. We manually add an entry "denoPort"
   in ``package.json`` pointing to the available port:
 
@@ -221,7 +221,7 @@ on the disk at runtime.
 
 It is now possible to use your module on node using ( assuming you have published it with ``npm publish`` ):
 
-``> npm install --save my-dummy-npm-and-deno-module``
+``$ npm install --save my-dummy-npm-and-deno-module``
 then: 
 ```typescript
 import { Cat } from "my-dummy-npm-and-deno-module"
@@ -230,6 +230,7 @@ import { Cat } from "my-dummy-npm-and-deno-module"
 And on deno with:
 
 ```typescript
+//This won't work here as I didn't submit it to deno.land/x
 import { Cat } from "https://deno.land/x/my_dummy_npm_and_deno_module@0.2.0/mod.ts";
 ```
 or if you haven't published on Deno.land:

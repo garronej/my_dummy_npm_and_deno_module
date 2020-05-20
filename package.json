@@ -9,7 +9,7 @@
     "dependencies": {
         "run-exclusive": "^2.1.12",
         "js-yaml": "^3.13.1",
-        "ts-md5": "github:garronej/ts-md5#v1.2.7"
+        "ts-md5": "github:garronej/ts-md5#1.2.7"
     },
     "denoPorts": {
         "js-yaml": "https://deno.land/x/js_yaml_port/js-yaml.js"

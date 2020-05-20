@@ -397,8 +397,8 @@
         "affectsGlobalScope": false
       },
       "../node_modules/@types/node/util.d.ts": {
-        "version": "07e53a7b819b740b6bbd16ffa381a44639a98d936b012dd13301b523399cee2d",
-        "signature": "07e53a7b819b740b6bbd16ffa381a44639a98d936b012dd13301b523399cee2d",
+        "version": "bfe1881838ba7c651b20165e17f942689dbe6e14b26d24268990e40aef68ce37",
+        "signature": "bfe1881838ba7c651b20165e17f942689dbe6e14b26d24268990e40aef68ce37",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/node/v8.d.ts": {
@@ -1484,5 +1484,5 @@
       "../src/tools/getpackagejsonname.ts"
     ]
   },
-  "version": "3.9.2"
+  "version": "3.9.3"
 }
