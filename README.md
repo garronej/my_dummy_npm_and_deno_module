@@ -36,7 +36,7 @@ This demo project depends on three modules:
   ```json
   //We must replace it by:
   "dependencies": {
-        "ts-md5": "garronej/ts-md5#v1.2.7"
+        "ts-md5": "garronej/ts-md5#1.2.7"
   }
   ```
 
@@ -169,7 +169,7 @@ Note that in this repo we run the tests with the ``--allow-read`` because we use
 
 ## Create a new GitHub release every time you publish on npm.
 
-Just after running ``> npm publish`` got to your GitHub repo pages -> release -> create new release ( or draft ne release ) and tag version enter ``0.2.0`` matching the current version in your ``package.json`` file.
+Just after running ``$ npm publish`` got to your GitHub repo pages -> release -> create new release ( or draft ne release ) and tag version enter ``0.2.0`` matching the current version in your ``package.json`` file.
 
 ## (Optional) Publish your module on deno.land
 
