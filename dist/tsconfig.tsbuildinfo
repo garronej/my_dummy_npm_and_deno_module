@@ -171,7 +171,7 @@
         "signature": "26702a4857e957493756fc740cfa27fa695914bc1c2da7c75bf6e0186553e7ae",
         "affectsGlobalScope": false
       },
-      "../node_modules/run-exclusive/dist/lib/runexclusive.d.ts": {
+      "../node_modules/run-exclusive/lib/runexclusive.d.ts": {
         "version": "b054215863e7c7889e10b9aca80a27525587560d2148645a85609dd79faa66be",
         "signature": "b054215863e7c7889e10b9aca80a27525587560d2148645a85609dd79faa66be",
         "affectsGlobalScope": false
@@ -187,7 +187,7 @@
         "affectsGlobalScope": false
       },
       "../src/lib/cat.ts": {
-        "version": "8f203cf65c3da49636cec725d6fc3c8289164a4031243ea163bf1f9ea49bd0d6",
+        "version": "5ad3343e0ec9d8eccfa8780fcf9e4c298a0210c0f070bb767a56a0654d38e5ae",
         "signature": "911485e4b1531c669aa26e41cc280218e4891d666863add31ea27610e61488d3",
         "affectsGlobalScope": false
       },
@@ -197,7 +197,7 @@
         "affectsGlobalScope": false
       },
       "../src/tools/getpackagejsonname.ts": {
-        "version": "f00c9e7c025a0c881c6768b4c96eb2b4d124fb6b4ee0ac5c8d63c62c280d003f",
+        "version": "11e171b4bb8d80512bec857631069134a2b899773400e611032ff97ac34f4003",
         "signature": "d438873888a76464651393198b34b8aa7287374f6ab10cabf7e41567a026f9c1",
         "affectsGlobalScope": false
       },
@@ -760,7 +760,7 @@
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
-      "../node_modules/run-exclusive/dist/lib/runexclusive.d.ts": [
+      "../node_modules/run-exclusive/lib/runexclusive.d.ts": [
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
@@ -881,7 +881,7 @@
         "../node_modules/@types/node/path.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts",
-        "../node_modules/run-exclusive/dist/lib/runexclusive.d.ts",
+        "../node_modules/run-exclusive/lib/runexclusive.d.ts",
         "../node_modules/ts-md5/dist/md5.d.ts",
         "../src/lib/interfaces/index.ts"
       ],
@@ -1241,7 +1241,7 @@
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
-      "../node_modules/run-exclusive/dist/lib/runexclusive.d.ts": [
+      "../node_modules/run-exclusive/lib/runexclusive.d.ts": [
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
@@ -1440,7 +1440,7 @@
       "../node_modules/@types/node/worker_threads.d.ts",
       "../node_modules/@types/node/zlib.d.ts",
       "../node_modules/colors/index.d.ts",
-      "../node_modules/run-exclusive/dist/lib/runexclusive.d.ts",
+      "../node_modules/run-exclusive/lib/runexclusive.d.ts",
       "../node_modules/ts-md5/dist/md5.d.ts",
       "../node_modules/typescript/lib/lib.es2015.collection.d.ts",
       "../node_modules/typescript/lib/lib.es2015.core.d.ts",

@@ -1,7 +1,7 @@
 
 import * as interfaces from "./interfaces";
 import * as runExclusive from "run-exclusive";
-import { buildMethod } from "run-exclusive/dist/lib/runExclusive";
+import { buildMethod } from "run-exclusive/lib/runExclusive";
 import { load } from "js-yaml";
 import { Md5 } from "ts-md5";
 import * as path from "path";

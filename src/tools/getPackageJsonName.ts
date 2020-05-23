@@ -14,7 +14,7 @@ export function getPackageJsonName(): string {
                     __dirname,
                     "..", "..", "package.json"
                 )
-            )
+            ) as Uint8Array
         )
     )["name"];
 

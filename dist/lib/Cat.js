@@ -38,7 +38,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 exports.__esModule = true;
 exports.createCat = exports.Cat = void 0;
 var runExclusive = require("run-exclusive");
-var runExclusive_1 = require("run-exclusive/dist/lib/runExclusive");
+var runExclusive_1 = require("run-exclusive/lib/runExclusive");
 var js_yaml_1 = require("js-yaml");
 var ts_md5_1 = require("ts-md5");
 var path = require("path");
