@@ -1,3 +1,4 @@
+//Not actual tests, just a place for you to experiment with the tool. 
 
 import { Cat } from "../lib/index.ts";
 import { getPackageJsonName } from "../tools/getPackageJsonName.ts";
@@ -12,6 +13,15 @@ console.log(cat.testJsYaml());
 console.log(cat.testMd5());
 
 console.log(cat.pathJoin(".", "path", "to", "file.txt"));
+
+
+{
+
+    cat.on("sound", (sound: any) => console.log({ sound }));
+    cat.makeSound();
+
+}
+
 
 (async () => {
 

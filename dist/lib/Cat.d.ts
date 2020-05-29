@@ -1,5 +1,7 @@
+/// <reference types="node" />
 import * as interfaces from "./interfaces";
-export declare class Cat implements interfaces.Cat {
+import { EventEmitter } from "events";
+export declare class Cat extends EventEmitter implements interfaces.Cat {
     type: "CAT";
     color: "BLACK";
     gender: "FEMALE";
@@ -9,5 +11,6 @@ export declare class Cat implements interfaces.Cat {
     spell: (alphabet: [string], letter: string) => Promise<void>;
     spell2: (alphabet: [string], letter: string) => Promise<void>;
     pathJoin(...args: string[]): string;
+    makeSound(): void;
 }
 export declare function createCat(): interfaces.Cat;

@@ -5,8 +5,11 @@ import { buildMethod } from "https://raw.githubusercontent.com/garronej/run_excl
 import { load } from "https://deno.land/x/js_yaml_port@3.14.0/js-yaml.js";
 import { Md5 } from "https://raw.githubusercontent.com/garronej/ts-md5/1.2.7/mod.ts";
 import * as path from "https://deno.land/std/node/path.ts";
+import { EventEmitter } from "https://deno.land/std/node/events.ts";
 
-export class Cat implements interfaces.Cat {
+console.assert(runExclusive.buildMethod === buildMethod );
+
+export class Cat extends EventEmitter implements interfaces.Cat {
 
     type = "CAT" as const;
     color = "BLACK" as const;
@@ -21,11 +24,13 @@ export class Cat implements interfaces.Cat {
         return Md5.hashStr("Foo bar");
     }
 
-
     spell = runExclusive.buildMethod(
         async (alphabet: [string], letter: string): Promise<void>=> {
 
-            await new Promise<void>(resolve=>setTimeout(()=>resolve(), Math.random() * 100));
+            await new Promise<void>(
+                resolve=>setTimeout(()=>resolve(), 
+                Math.random() * 100)
+            );
 
             alphabet[0]+= letter;
 
@@ -44,6 +49,10 @@ export class Cat implements interfaces.Cat {
 
     pathJoin(...args: string[]): string{
         return path.join(...args);
+    }
+
+    makeSound(){
+        this.emit("sound", "meow");
     }
 
 }

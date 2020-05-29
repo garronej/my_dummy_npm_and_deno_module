@@ -1,4 +1,17 @@
 "use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -42,14 +55,17 @@ var runExclusive_1 = require("run-exclusive/lib/runExclusive");
 var js_yaml_1 = require("js-yaml");
 var ts_md5_1 = require("ts-md5");
 var path = require("path");
-var Cat = /** @class */ (function () {
+var events_1 = require("events");
+console.assert(runExclusive.buildMethod === runExclusive_1.buildMethod);
+var Cat = /** @class */ (function (_super) {
+    __extends(Cat, _super);
     function Cat() {
-        var _this = this;
-        this.type = "CAT";
-        this.color = "BLACK";
-        this.gender = "FEMALE";
-        this.size = "SMALL";
-        this.spell = runExclusive.buildMethod(function (alphabet, letter) { return __awaiter(_this, void 0, void 0, function () {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.type = "CAT";
+        _this.color = "BLACK";
+        _this.gender = "FEMALE";
+        _this.size = "SMALL";
+        _this.spell = runExclusive.buildMethod(function (alphabet, letter) { return __awaiter(_this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0: return [4 /*yield*/, new Promise(function (resolve) { return setTimeout(function () { return resolve(); }, Math.random() * 100); })];
@@ -60,7 +76,7 @@ var Cat = /** @class */ (function () {
                 }
             });
         }); });
-        this.spell2 = runExclusive_1.buildMethod(function (alphabet, letter) { return __awaiter(_this, void 0, void 0, function () {
+        _this.spell2 = runExclusive_1.buildMethod(function (alphabet, letter) { return __awaiter(_this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0: return [4 /*yield*/, new Promise(function (resolve) { return setTimeout(function () { return resolve(); }, Math.random() * 100); })];
@@ -71,6 +87,7 @@ var Cat = /** @class */ (function () {
                 }
             });
         }); });
+        return _this;
     }
     Cat.prototype.testJsYaml = function () {
         return js_yaml_1.load('hello: world');
@@ -85,8 +102,11 @@ var Cat = /** @class */ (function () {
         }
         return path.join.apply(path, args);
     };
+    Cat.prototype.makeSound = function () {
+        this.emit("sound", "meow");
+    };
     return Cat;
-}());
+}(events_1.EventEmitter));
 exports.Cat = Cat;
 function createCat() {
     return {

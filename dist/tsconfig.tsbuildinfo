@@ -187,8 +187,8 @@
         "affectsGlobalScope": false
       },
       "../src/lib/cat.ts": {
-        "version": "5ad3343e0ec9d8eccfa8780fcf9e4c298a0210c0f070bb767a56a0654d38e5ae",
-        "signature": "911485e4b1531c669aa26e41cc280218e4891d666863add31ea27610e61488d3",
+        "version": "022d00e4fdb7cd17cfa4ae2c23eb601a5dcaaf1a2ca0354107d34aaf70669c14",
+        "signature": "a8de2faad07e3cccbb5830b5cad821fbaab2322e7449c01aa416c940de4ea453",
         "affectsGlobalScope": false
       },
       "../src/lib/index.ts": {
@@ -202,7 +202,7 @@
         "affectsGlobalScope": false
       },
       "../src/test/test1.ts": {
-        "version": "a5b80cd880a003e4509ee56c320f80c5456f99b0e826d517b466cbc56170933f",
+        "version": "2bbcfc76c8f668514fb00496e7f3b1333d8f688827a93fdc95ed1ee447962f10",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
         "affectsGlobalScope": false
       },
@@ -878,6 +878,7 @@
       ],
       "../src/lib/cat.ts": [
         "../node_modules/@types/js-yaml/index.d.ts",
+        "../node_modules/@types/node/events.d.ts",
         "../node_modules/@types/node/path.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -1358,6 +1359,7 @@
         "../node_modules/@types/node/util.d.ts"
       ],
       "../src/lib/cat.ts": [
+        "../node_modules/@types/node/events.d.ts",
         "../src/lib/interfaces/index.ts"
       ],
       "../src/lib/index.ts": [

@@ -5,8 +5,11 @@ import { buildMethod } from "run-exclusive/lib/runExclusive";
 import { load } from "js-yaml";
 import { Md5 } from "ts-md5";
 import * as path from "path";
+import { EventEmitter } from "events";
 
-export class Cat implements interfaces.Cat {
+console.assert(runExclusive.buildMethod === buildMethod );
+
+export class Cat extends EventEmitter implements interfaces.Cat {
 
     type = "CAT" as const;
     color = "BLACK" as const;
@@ -21,11 +24,13 @@ export class Cat implements interfaces.Cat {
         return Md5.hashStr("Foo bar");
     }
 
-
     spell = runExclusive.buildMethod(
         async (alphabet: [string], letter: string): Promise<void>=> {
 
-            await new Promise<void>(resolve=>setTimeout(()=>resolve(), Math.random() * 100));
+            await new Promise<void>(
+                resolve=>setTimeout(()=>resolve(), 
+                Math.random() * 100)
+            );
 
             alphabet[0]+= letter;
 
@@ -44,6 +49,10 @@ export class Cat implements interfaces.Cat {
 
     pathJoin(...args: string[]): string{
         return path.join(...args);
+    }
+
+    makeSound(){
+        this.emit("sound", "meow");
     }
 
 }
