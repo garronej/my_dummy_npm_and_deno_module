@@ -72,7 +72,7 @@ By default deno as all strict modes enable so if you want your module to run on 
 
 It might rise a lot of error but they are all very easy to fix even if you are not familiar with the codebase. 
 
-For errors related to ``this`` or that implicitly having an any type, replace:
+For errors related to ``this`` implicitly having an any type, replace:
 ```typescript
 function myFun(a): number{
     this.doSomething(a);
