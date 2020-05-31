@@ -1,6 +1,6 @@
 {
     "name": "my-dummy-npm-and-deno-module",
-    "version": "0.2.3",
+    "version": "0.2.4",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/garronej/my_dummy_npm_and_deno_module.git"
@@ -15,16 +15,14 @@
         "js-yaml": "https://deno.land/x/js_yaml_port/js-yaml.js"
     },
     "scripts": {
-        "tsc": "npx tsc",
-        "denoify": "npx denoify",
-        "build": "npm run tsc && npm run denoify",
+        "build": "tsc && denoify",
         "test:node": "node ./dist/test",
-        "test:deno": "deno run --allow-read ./deno_dist/test/deno_index.ts",
+        "test:deno": "deno run --reload --allow-read ./deno_dist/test/deno_index.ts",
         "test": "npm run test:node && npm run test:deno"
     },
     "devDependencies": {
-        "denoify": "0.2.13",
-        "typescript": "^3.8.3",
+        "denoify": "0.2.20",
+        "typescript": "^3.9.3",
         "@types/js-yaml": "^3.12.3",
         "@types/node": "^10.0.0",
         "colors": "^1.4.0"

@@ -171,9 +171,16 @@
         "signature": "26702a4857e957493756fc740cfa27fa695914bc1c2da7c75bf6e0186553e7ae",
         "affectsGlobalScope": false
       },
-      "../node_modules/run-exclusive/lib/runexclusive.d.ts": {
-        "version": "b054215863e7c7889e10b9aca80a27525587560d2148645a85609dd79faa66be",
-        "signature": "b054215863e7c7889e10b9aca80a27525587560d2148645a85609dd79faa66be",
+      "../node_modules/minimal-polyfills/map.ts": {
+        "version": "23e7bae86df110ad8a68097750530f288c5117fe4c4b30e645b449d20fe156a5",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/minimal-polyfills/weakmap.ts": {
+        "version": "b17cc904902c54524021afe32786210d806706ac25e96beddbb831b9ac14226e",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/run-exclusive/lib/runexclusive.ts": {
+        "version": "d001b8fba3b9dddd390e7be457aa025802c4b3d314b6eb07838ac6917a963734",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/js-yaml/index.d.ts": {
@@ -760,9 +767,19 @@
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
-      "../node_modules/run-exclusive/lib/runexclusive.d.ts": [
+      "../node_modules/minimal-polyfills/map.ts": [
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/minimal-polyfills/weakmap.ts": [
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/minimal-polyfills/map.ts"
+      ],
+      "../node_modules/run-exclusive/lib/runexclusive.ts": [
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/minimal-polyfills/weakmap.ts"
       ],
       "../node_modules/ts-md5/dist/md5.d.ts": [
         "../node_modules/@types/node/ts3.2/util.d.ts",
@@ -882,7 +899,7 @@
         "../node_modules/@types/node/path.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts",
-        "../node_modules/run-exclusive/lib/runexclusive.d.ts",
+        "../node_modules/run-exclusive/lib/runexclusive.ts",
         "../node_modules/ts-md5/dist/md5.d.ts",
         "../src/lib/interfaces/index.ts"
       ],
@@ -1242,10 +1259,6 @@
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
-      "../node_modules/run-exclusive/lib/runexclusive.d.ts": [
-        "../node_modules/@types/node/ts3.2/util.d.ts",
-        "../node_modules/@types/node/util.d.ts"
-      ],
       "../node_modules/ts-md5/dist/md5.d.ts": [
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts"
@@ -1442,7 +1455,9 @@
       "../node_modules/@types/node/worker_threads.d.ts",
       "../node_modules/@types/node/zlib.d.ts",
       "../node_modules/colors/index.d.ts",
-      "../node_modules/run-exclusive/lib/runexclusive.d.ts",
+      "../node_modules/minimal-polyfills/map.ts",
+      "../node_modules/minimal-polyfills/weakmap.ts",
+      "../node_modules/run-exclusive/lib/runexclusive.ts",
       "../node_modules/ts-md5/dist/md5.d.ts",
       "../node_modules/typescript/lib/lib.es2015.collection.d.ts",
       "../node_modules/typescript/lib/lib.es2015.core.d.ts",
