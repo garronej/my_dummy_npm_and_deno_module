@@ -236,7 +236,7 @@ import { Cat } from "https://deno.land/x/my_dummy_npm_and_deno_module@0.2.4/mod
 or if you haven't published on Deno.land:
 
 ```typescript
-import { Cat } from "https://raw.github.com/garronej/my_dummy_npm_and_deno_module/0.2.4/mod.ts";
+import { Cat } from "https://raw.githubusercontent.com/garronej/my_dummy_npm_and_deno_module/0.2.4/mod.ts";
 ```
 
 On top of that this module can now be used as a dependency in other modules that uses ``denoify``.
