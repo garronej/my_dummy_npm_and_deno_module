@@ -153,7 +153,7 @@ the ``npm`` scripts.
         "denoify": "0.2.20",
     }
     "scripts": {
-        "build": "tsc && npm denoify",
+        "build": "tsc && denoify",
     }
 ```
 
