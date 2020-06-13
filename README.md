@@ -58,7 +58,7 @@ The typical value to use is:
 
 ### Enable strict mode and fixes errors if any.
 
-By default deno as all strict modes enable so if you want your module to run on deno regardless of the context you must set: 
+By default deno has all strict compiler options enabled so if you want your module to run on deno regardless of the context you must set: 
 
 ```json
 {
