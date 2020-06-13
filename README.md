@@ -150,7 +150,7 @@ the ``npm`` scripts.
 ``package.json``
 ```json
     "devDependencies": {
-        "denoify": "0.2.20",
+        "denoify": "^0.2.22",
     }
     "scripts": {
         "build": "tsc && denoify",
