@@ -5,6 +5,8 @@ import { getPackageJsonName } from "../tools/getPackageJsonName";
 
 console.log(`package.json "name" filed value ( to test some Node builtins ): ${getPackageJsonName()}`);
 
+console.log(Buffer.byteLength(Buffer.from("hello")));
+
 const cat = new Cat();
 
 console.log(cat);
@@ -21,6 +23,7 @@ console.log(cat.pathJoin(".", "path", "to", "file.txt"));
     cat.makeSound();
 
 }
+
 
 
 (async () => {

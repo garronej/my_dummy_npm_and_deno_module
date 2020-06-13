@@ -1,9 +1,12 @@
+import { Buffer } from "https://deno.land/std/node/buffer.ts";
 //Not actual tests, just a place for you to experiment with the tool. 
 
 import { Cat } from "../lib/index.ts";
 import { getPackageJsonName } from "../tools/getPackageJsonName.ts";
 
 console.log(`package.json "name" filed value ( to test some Node builtins ): ${getPackageJsonName()}`);
+
+console.log(Buffer.byteLength(Buffer.from("hello")));
 
 const cat = new Cat();
 
@@ -21,6 +24,7 @@ console.log(cat.pathJoin(".", "path", "to", "file.txt"));
     cat.makeSound();
 
 }
+
 
 
 (async () => {
