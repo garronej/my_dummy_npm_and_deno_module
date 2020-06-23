@@ -1,6 +1,6 @@
 {
     "name": "my-dummy-npm-and-deno-module",
-    "version": "0.2.5",
+    "version": "0.2.6",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/garronej/my_dummy_npm_and_deno_module.git"
@@ -21,7 +21,7 @@
         "test": "npm run test:node && npm run test:deno"
     },
     "devDependencies": {
-        "denoify": "^0.2.22",
+        "denoify": "^0.3.0",
         "typescript": "^3.9.3",
         "@types/js-yaml": "^3.12.3",
         "@types/node": "^10.0.0",
