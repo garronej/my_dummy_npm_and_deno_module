@@ -1,11 +1,11 @@
 
 import * as interfaces from "./interfaces/index.ts";
-import * as runExclusive from "https://raw.githubusercontent.com/garronej/run_exclusive/2.2.7/mod.ts";
-import { buildMethod } from "https://raw.githubusercontent.com/garronej/run_exclusive/2.2.7/lib/runExclusive.ts";
+import * as runExclusive from "https://raw.githubusercontent.com/garronej/run_exclusive/v2.2.9/mod.ts";
+import { buildMethod } from "https://raw.githubusercontent.com/garronej/run_exclusive/v2.2.9/lib/runExclusive.ts";
 import { load } from "https://deno.land/x/js_yaml_port@3.14.0/js-yaml.js";
 import { Md5 } from "https://raw.githubusercontent.com/garronej/ts-md5/1.2.7/mod.ts";
-import * as path from "https://deno.land/std@0.58.0/node/path.ts";
-import { EventEmitter } from "https://deno.land/std@0.58.0/node/events.ts";
+import * as path from "https://deno.land/std@0.63.0/node/path.ts";
+import { EventEmitter } from "https://deno.land/std@0.63.0/node/events.ts";
 
 console.assert(runExclusive.buildMethod === buildMethod );
 

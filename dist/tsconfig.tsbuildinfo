@@ -184,8 +184,8 @@
         "affectsGlobalScope": false
       },
       "../node_modules/@types/js-yaml/index.d.ts": {
-        "version": "35076b65eb3d849fba353635aeb0ae7f26c5a9c69503a9ed09228e92445c90cb",
-        "signature": "35076b65eb3d849fba353635aeb0ae7f26c5a9c69503a9ed09228e92445c90cb",
+        "version": "c303a72d3128054d400767264e6f5414b86bf29c1b11730c45027f2213e82f34",
+        "signature": "c303a72d3128054d400767264e6f5414b86bf29c1b11730c45027f2213e82f34",
         "affectsGlobalScope": false
       },
       "../node_modules/ts-md5/dist/md5.d.ts": {
@@ -234,8 +234,8 @@
         "affectsGlobalScope": false
       },
       "../node_modules/@types/node/globals.d.ts": {
-        "version": "da55f3fbb4189aec7caf4da308901f7b9d1e916337d9dfbdbcd162a46a835bdd",
-        "signature": "da55f3fbb4189aec7caf4da308901f7b9d1e916337d9dfbdbcd162a46a835bdd",
+        "version": "f323beec07a17e0082bfeed95ad57d66c9a65fc799c98511993cb2112a9e1c77",
+        "signature": "f323beec07a17e0082bfeed95ad57d66c9a65fc799c98511993cb2112a9e1c77",
         "affectsGlobalScope": true
       },
       "../node_modules/@types/node/async_hooks.d.ts": {
@@ -249,8 +249,8 @@
         "affectsGlobalScope": false
       },
       "../node_modules/@types/node/child_process.d.ts": {
-        "version": "3814f4b4c648f278aefda68889f8912ef9928ba6fc12bf6dd85a6a680b660e00",
-        "signature": "3814f4b4c648f278aefda68889f8912ef9928ba6fc12bf6dd85a6a680b660e00",
+        "version": "1c6fdd94b597c15829e8a12a12c21e1cd931bb24bc5a2b0cbe2bc21474db0eee",
+        "signature": "1c6fdd94b597c15829e8a12a12c21e1cd931bb24bc5a2b0cbe2bc21474db0eee",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/node/cluster.d.ts": {
@@ -369,8 +369,8 @@
         "affectsGlobalScope": false
       },
       "../node_modules/@types/node/stream.d.ts": {
-        "version": "9bfc0868808314fc72ca0d8a43842dec476f822fd52789945cf31c30a649e06d",
-        "signature": "9bfc0868808314fc72ca0d8a43842dec476f822fd52789945cf31c30a649e06d",
+        "version": "d773accd5b85fb3127f212218d33a262aad2d118d18c7367b4dcf65482e13906",
+        "signature": "d773accd5b85fb3127f212218d33a262aad2d118d18c7367b4dcf65482e13906",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/node/string_decoder.d.ts": {
@@ -1501,5 +1501,5 @@
       "../src/tools/getpackagejsonname.ts"
     ]
   },
-  "version": "3.9.5"
+  "version": "3.9.7"
 }

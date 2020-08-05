@@ -169,21 +169,14 @@ Note that in this repo we run the tests with the ``--allow-read`` because we use
 
 ## Create a new GitHub release every time you publish on npm.
 
-Just after running ``$ npm publish`` got to your GitHub repo pages -> release -> create new release ( or draft ne release ) and tag version enter ``0.2.6`` matching the current version in your ``package.json`` file.
+Just after running ``$ npm publish`` got to your GitHub repo pages -> release -> create new release ( or draft ne release ) and tag version enter ``v0.2.7`` matching the current version in your ``package.json`` file.
 
 ## (Optional) Publish your module on deno.land
 
-If you want your module to be listed here: https://deno.land/x/
-Edit this file: https://github.com/denoland/deno_website2/blob/master/database.json
-insert (at the right position, alphabetical ordering):
-```json
-"my_dummy_npm_and_deno_module": {
-    "type": "github",
-    "owner": "garronej",
-    "repo": "my_dummy_npm_and_deno_module",
-    "desc": "Demo how to make cross compatible module with denoify"
-  },
-```
+
+Navigate to [deno.land/x](https://deno.land/x), click ``Add a module`` then follow the instruction.
+( leave blanc the target directory, the mod.ts file is at the root of the project )
+
 
 # Accessing files on the disk.
 
@@ -231,12 +224,12 @@ And on deno with:
 
 ```typescript
 //This won't work here as I didn't submit it to deno.land/x
-import { Cat } from "https://deno.land/x/my_dummy_npm_and_deno_module@0.2.6/mod.ts";
+import { Cat } from "https://deno.land/x/my_dummy_npm_and_deno_module@v0.2.6/mod.ts";
 ```
 or if you haven't published on Deno.land:
 
 ```typescript
-import { Cat } from "https://raw.githubusercontent.com/garronej/my_dummy_npm_and_deno_module/0.2.6/mod.ts";
+import { Cat } from "https://raw.githubusercontent.com/garronej/my_dummy_npm_and_deno_module/v0.2.6/mod.ts";
 ```
 
 On top of that this module can now be used as a dependency in other modules that uses ``denoify``.

@@ -21,7 +21,7 @@
         "test": "npm run test:node && npm run test:deno"
     },
     "devDependencies": {
-        "denoify": "^0.3.0",
+        "denoify": "^0.3.7",
         "typescript": "^3.9.3",
         "@types/js-yaml": "^3.12.3",
         "@types/node": "^10.0.0",
