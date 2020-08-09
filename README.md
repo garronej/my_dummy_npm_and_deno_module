@@ -175,7 +175,7 @@ Just after running ``$ npm publish`` got to your GitHub repo pages -> release ->
 
 
 Navigate to [deno.land/x](https://deno.land/x), click ``Add a module`` then follow the instruction.
-( leave blanc the target directory, the mod.ts file is at the root of the project )
+( leave blanc the target directory, the `mod.ts` file is at the root of the project )
 
 
 # Accessing files on the disk.
