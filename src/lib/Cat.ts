@@ -6,6 +6,7 @@ import { load } from "js-yaml";
 import { Md5 } from "ts-md5";
 import * as path from "path";
 import { EventEmitter } from "events";
+import * as ipaddr from "ipaddr.js";
 
 console.assert(runExclusive.buildMethod === buildMethod );
 
@@ -53,6 +54,10 @@ export class Cat extends EventEmitter implements interfaces.Cat {
 
     makeSound(){
         this.emit("sound", "meow");
+    }
+
+    getIpV4Octets(ip: string) {
+        return ipaddr.IPv4.parse(ip).octets;
     }
 
 }

@@ -36,12 +36,11 @@ This demo project depends on three modules:
 },
 ```
 
-- `ipaddr.js`: There is a custom import statements replacer for it, [see here](https://github.com/garronej/denoify/tree/master/src/bin/replacer). We do not need to specify a custom port.
-
 We can ignore the dev dependencies as they are not mandatory to run the module.
 
 NOTE: `denoPorts` entry only accept urls of types `https://deno.land/x/...` or `https://raw.github.com/...`.
-Github repo under the form of `<userOrOrg>/<repoName>` will only works with module that have been denoified ( like [garronej/tm-md5](https://github.com/garronej/ts-md5) )
+However you can, and should, specify a github repo under the form of `<userOrOrg>/<repoName>` but it will
+only works with module that have been denoified ( like [garronej/tm-md5](https://github.com/garronej/ts-md5) )
 
 If you want to use urls from Pika, jspm or UNPKG you can but you have to write custom replacers.
 
@@ -178,7 +177,7 @@ Note that in this repo we run the tests with the ``--allow-read`` because we use
 
 ## Create a new GitHub release every time you publish on npm.
 
-Just after running ``$ npm publish`` got to your GitHub repo pages -> release -> create new release ( or draft ne release ) and tag version enter ``v0.2.9`` matching the current version in your ``package.json`` file.
+Just after running ``$ npm publish`` got to your GitHub repo pages -> release -> create new release ( or draft ne release ) and tag version enter ``v0.2.7`` matching the current version in your ``package.json`` file.
 
 ## (Optional) Publish your module on deno.land
 
@@ -230,12 +229,12 @@ import { Cat } from "my-dummy-npm-and-deno-module"
 And on deno with:
 
 ```typescript
-import { Cat } from "https://deno.land/x/my_dummy_npm_and_deno_module@v0.2.9/mod.ts";
+import { Cat } from "https://deno.land/x/my_dummy_npm_and_deno_module@v0.2.7/mod.ts";
 ```
 or if you haven't published on Deno.land:
 
 ```typescript
-import { Cat } from "https://raw.githubusercontent.com/garronej/my_dummy_npm_and_deno_module/v0.2.9/deno_dist/mod.ts";
+import { Cat } from "https://raw.githubusercontent.com/garronej/my_dummy_npm_and_deno_module/v0.2.7/deno_dist/mod.ts";
 ```
 
 On top of that this module can now be used as a dependency in other modules that uses ``denoify``.

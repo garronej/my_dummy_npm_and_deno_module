@@ -56,6 +56,7 @@ var js_yaml_1 = require("js-yaml");
 var ts_md5_1 = require("ts-md5");
 var path = require("path");
 var events_1 = require("events");
+var ipaddr = require("ipaddr.js");
 console.assert(runExclusive.buildMethod === runExclusive_1.buildMethod);
 var Cat = /** @class */ (function (_super) {
     __extends(Cat, _super);
@@ -104,6 +105,9 @@ var Cat = /** @class */ (function (_super) {
     };
     Cat.prototype.makeSound = function () {
         this.emit("sound", "meow");
+    };
+    Cat.prototype.getIpV4Octets = function (ip) {
+        return ipaddr.IPv4.parse(ip).octets;
     };
     return Cat;
 }(events_1.EventEmitter));

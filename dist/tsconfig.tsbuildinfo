@@ -189,13 +189,18 @@
         "affectsGlobalScope": false
       },
       "../node_modules/ts-md5/dist/md5.d.ts": {
-        "version": "bec8c2e0817e8141b8f2a9657f2ebc22583da89024a1786e6de97a670dae0641",
-        "signature": "bec8c2e0817e8141b8f2a9657f2ebc22583da89024a1786e6de97a670dae0641",
+        "version": "c08c8d793256077068d9437e0b8df22fe477d9015fac544534ec6d296157f10d",
+        "signature": "c08c8d793256077068d9437e0b8df22fe477d9015fac544534ec6d296157f10d",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/ipaddr.js/lib/ipaddr.js.d.ts": {
+        "version": "662a75272462317059315f3028452dc8044f752ad0b6b61c084a7ae3eeb0f775",
+        "signature": "662a75272462317059315f3028452dc8044f752ad0b6b61c084a7ae3eeb0f775",
         "affectsGlobalScope": false
       },
       "../src/lib/cat.ts": {
-        "version": "022d00e4fdb7cd17cfa4ae2c23eb601a5dcaaf1a2ca0354107d34aaf70669c14",
-        "signature": "a8de2faad07e3cccbb5830b5cad821fbaab2322e7449c01aa416c940de4ea453",
+        "version": "53aefe87c7dcae7cba42a6b367e53bf710df9c3a203af4df407f7737d00c9854",
+        "signature": "65afc6fac30af018b6739934db1d9ad0db88879368ededd4101e15f1c5ff0628",
         "affectsGlobalScope": false
       },
       "../src/lib/index.ts": {
@@ -209,7 +214,7 @@
         "affectsGlobalScope": false
       },
       "../src/test/test1.ts": {
-        "version": "daec615795f78b5755316315d9b1d6e7747b5ffcaba24e3e8b0ab0087ab911a3",
+        "version": "52125040b9095b1264f986eb8676431c3b0ed4eb89d9c1ba848d59129dfdfd89",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
         "affectsGlobalScope": false
       },
@@ -767,6 +772,10 @@
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
+      "../node_modules/ipaddr.js/lib/ipaddr.js.d.ts": [
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
       "../node_modules/minimal-polyfills/map.ts": [
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts"
@@ -899,6 +908,7 @@
         "../node_modules/@types/node/path.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts",
+        "../node_modules/ipaddr.js/lib/ipaddr.js.d.ts",
         "../node_modules/run-exclusive/lib/runexclusive.ts",
         "../node_modules/ts-md5/dist/md5.d.ts",
         "../src/lib/interfaces/index.ts"
@@ -1259,6 +1269,10 @@
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
+      "../node_modules/ipaddr.js/lib/ipaddr.js.d.ts": [
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
       "../node_modules/ts-md5/dist/md5.d.ts": [
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts"
@@ -1455,6 +1469,7 @@
       "../node_modules/@types/node/worker_threads.d.ts",
       "../node_modules/@types/node/zlib.d.ts",
       "../node_modules/colors/index.d.ts",
+      "../node_modules/ipaddr.js/lib/ipaddr.js.d.ts",
       "../node_modules/minimal-polyfills/map.ts",
       "../node_modules/minimal-polyfills/weakmap.ts",
       "../node_modules/run-exclusive/lib/runexclusive.ts",

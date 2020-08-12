@@ -1,11 +1,12 @@
 
 import * as interfaces from "./interfaces/index.ts";
-import * as runExclusive from "https://raw.githubusercontent.com/garronej/run_exclusive/v2.2.9/mod.ts";
-import { buildMethod } from "https://raw.githubusercontent.com/garronej/run_exclusive/v2.2.9/lib/runExclusive.ts";
+import * as runExclusive from "https://raw.githubusercontent.com/garronej/run_exclusive/v2.2.13/deno_dist/mod.ts";
+import { buildMethod } from "https://raw.githubusercontent.com/garronej/run_exclusive/v2.2.13/deno_dist/lib/runExclusive.ts";
 import { load } from "https://deno.land/x/js_yaml_port@3.14.0/js-yaml.js";
-import { Md5 } from "https://raw.githubusercontent.com/garronej/ts-md5/1.2.7/mod.ts";
-import * as path from "https://deno.land/std@0.63.0/node/path.ts";
-import { EventEmitter } from "https://deno.land/std@0.63.0/node/events.ts";
+import { Md5 } from "https://raw.githubusercontent.com/garronej/ts-md5/v1.2.7/deno_dist/mod.ts";
+import * as path from "https://deno.land/std@0.64.0/node/path.ts";
+import { EventEmitter } from "https://deno.land/std@0.64.0/node/events.ts";
+import ipaddr from "https://jspm.dev/ipaddr.js@1.9.1";
 
 console.assert(runExclusive.buildMethod === buildMethod );
 
@@ -53,6 +54,10 @@ export class Cat extends EventEmitter implements interfaces.Cat {
 
     makeSound(){
         this.emit("sound", "meow");
+    }
+
+    getIpV4Octets(ip: string) {
+        return ipaddr.IPv4.parse(ip).octets;
     }
 
 }
