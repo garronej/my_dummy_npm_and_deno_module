@@ -36,7 +36,7 @@ This demo project depends on three modules:
 },
 ```
 
-- `ipaddr.js`: There is a custom import statements replacer for it, [see here](https://github.com/garronej/denoify/tree/master/src/bin/replacer). We do not need to specify a custom port.
+-  `react`, `react-dom`, `ipaddr.js`,: Denoify has builtin import statement replacer for these modules, [see here](https://github.com/garronej/denoify/tree/master/src/bin/replacer). We do not need to specify any custom port.
 
 We can ignore the dev dependencies as they are not mandatory to run the module.
 
