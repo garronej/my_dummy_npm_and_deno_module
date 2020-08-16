@@ -57,6 +57,7 @@ var ts_md5_1 = require("ts-md5");
 var path = require("path");
 var events_1 = require("events");
 var ipaddr = require("ipaddr.js");
+var dummyRender_1 = require("./dummyRender");
 console.assert(runExclusive.buildMethod === runExclusive_1.buildMethod);
 var Cat = /** @class */ (function (_super) {
     __extends(Cat, _super);
@@ -108,6 +109,9 @@ var Cat = /** @class */ (function (_super) {
     };
     Cat.prototype.getIpV4Octets = function (ip) {
         return ipaddr.IPv4.parse(ip).octets;
+    };
+    Cat.prototype.dummyRender = function () {
+        return dummyRender_1.dummyRender({ "foo": "Hello Isomorphic React" });
     };
     return Cat;
 }(events_1.EventEmitter));

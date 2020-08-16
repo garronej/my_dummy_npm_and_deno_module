@@ -1,4 +1,4 @@
-import { Buffer } from "https://deno.land/std@0.64.0/node/buffer.ts";
+import { Buffer } from "https://deno.land/std@0.65.0/node/buffer.ts";
 //Not actual tests, just a place for you to experiment with the tool. 
 
 import { Cat } from "../lib/index.ts";
@@ -26,6 +26,8 @@ console.log(cat.pathJoin(".", "path", "to", "file.txt"));
 }
 
 console.log(cat.getIpV4Octets("192.168.1.1"));
+
+console.log(cat.dummyRender());
 
 (async () => {
 

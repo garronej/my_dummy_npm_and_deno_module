@@ -26,6 +26,8 @@ console.log(cat.pathJoin(".", "path", "to", "file.txt"));
 
 console.log(cat.getIpV4Octets("192.168.1.1"));
 
+console.log(cat.dummyRender());
+
 (async () => {
 
     const alphabet: [string] = ["abc"];

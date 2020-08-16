@@ -7,6 +7,8 @@ import { Md5 } from "ts-md5";
 import * as path from "path";
 import { EventEmitter } from "events";
 import * as ipaddr from "ipaddr.js";
+import { dummyRender } from "./dummyRender";
+
 
 console.assert(runExclusive.buildMethod === buildMethod );
 
@@ -58,6 +60,10 @@ export class Cat extends EventEmitter implements interfaces.Cat {
 
     getIpV4Octets(ip: string) {
         return ipaddr.IPv4.parse(ip).octets;
+    }
+
+    dummyRender() {
+        return dummyRender({ "foo": "Hello Isomorphic React" });
     }
 
 }

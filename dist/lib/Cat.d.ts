@@ -13,5 +13,6 @@ export declare class Cat extends EventEmitter implements interfaces.Cat {
     pathJoin(...args: string[]): string;
     makeSound(): void;
     getIpV4Octets(ip: string): number[];
+    dummyRender(): string;
 }
 export declare function createCat(): interfaces.Cat;

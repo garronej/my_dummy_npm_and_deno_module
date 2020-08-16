@@ -198,9 +198,39 @@
         "signature": "662a75272462317059315f3028452dc8044f752ad0b6b61c084a7ae3eeb0f775",
         "affectsGlobalScope": false
       },
+      "../node_modules/@types/react/global.d.ts": {
+        "version": "ecf78e637f710f340ec08d5d92b3f31b134a46a4fcf2e758690d8c46ce62cba6",
+        "signature": "ecf78e637f710f340ec08d5d92b3f31b134a46a4fcf2e758690d8c46ce62cba6",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/csstype/index.d.ts": {
+        "version": "859b1245cdfd0d6e0752cdb59913e36fb2946e919f5d99846ef7f8ab45d5735e",
+        "signature": "859b1245cdfd0d6e0752cdb59913e36fb2946e919f5d99846ef7f8ab45d5735e",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/prop-types/index.d.ts": {
+        "version": "a7e32dcb90bf0c1b7a1e4ac89b0f7747cbcba25e7beddc1ebf17be1e161842ad",
+        "signature": "a7e32dcb90bf0c1b7a1e4ac89b0f7747cbcba25e7beddc1ebf17be1e161842ad",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/react/index.d.ts": {
+        "version": "b0de1737a447411ed29ff2cf75b82b9f4e89791337f743c3b6bcbd05a95ec524",
+        "signature": "b0de1737a447411ed29ff2cf75b82b9f4e89791337f743c3b6bcbd05a95ec524",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/@types/react-dom/server/index.d.ts": {
+        "version": "53cea979e3bea1c13b6c88496a6dcfd130f5cbcd36c697dabfc71d5033508164",
+        "signature": "53cea979e3bea1c13b6c88496a6dcfd130f5cbcd36c697dabfc71d5033508164",
+        "affectsGlobalScope": true
+      },
+      "../src/lib/dummyrender.tsx": {
+        "version": "75e30cb47e884c200b33f6f1aa039db8d5eb0309ceffc1103e3778428867fe12",
+        "signature": "fd08543ab509fc909b2c35358769c97463ce951179ff55b5024c868d28250d94",
+        "affectsGlobalScope": false
+      },
       "../src/lib/cat.ts": {
-        "version": "53aefe87c7dcae7cba42a6b367e53bf710df9c3a203af4df407f7737d00c9854",
-        "signature": "65afc6fac30af018b6739934db1d9ad0db88879368ededd4101e15f1c5ff0628",
+        "version": "9b4e0d2ec692b6934d30d34c7a11f191e4286b6dc4dffdd387dedba9a11503fe",
+        "signature": "8b64ed3d63d041c39e4f03daaccac4c36ff4236e55352101dd033ece4944b317",
         "affectsGlobalScope": false
       },
       "../src/lib/index.ts": {
@@ -214,7 +244,7 @@
         "affectsGlobalScope": false
       },
       "../src/test/test1.ts": {
-        "version": "52125040b9095b1264f986eb8676431c3b0ed4eb89d9c1ba848d59129dfdfd89",
+        "version": "8bbcd5f258d2dcb177213f06c57df1044b2f181c4d0ed4a00789c465eb98de90",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
         "affectsGlobalScope": false
       },
@@ -467,6 +497,11 @@
         "version": "d522314e80ed71b57e3c2939d3c9594eaae63a4adf028559e6574f6b270b0fee",
         "signature": "d522314e80ed71b57e3c2939d3c9594eaae63a4adf028559e6574f6b270b0fee",
         "affectsGlobalScope": false
+      },
+      "../node_modules/@types/react-dom/index.d.ts": {
+        "version": "8483a29c17f7feb768a1f4333cf12ccf1e7341bd89dadcf407e012d5315228d0",
+        "signature": "8483a29c17f7feb768a1f4333cf12ccf1e7341bd89dadcf407e012d5315228d0",
+        "affectsGlobalScope": false
       }
     },
     "options": {
@@ -483,6 +518,7 @@
       "noUnusedLocals": true,
       "noUnusedParameters": true,
       "strict": true,
+      "jsx": 2,
       "configFilePath": "../tsconfig.json"
     },
     "referencedMap": {
@@ -768,7 +804,36 @@
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
+      "../node_modules/@types/prop-types/index.d.ts": [
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/@types/react-dom/index.d.ts": [
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/react/index.d.ts"
+      ],
+      "../node_modules/@types/react-dom/server/index.d.ts": [
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/react/index.d.ts"
+      ],
+      "../node_modules/@types/react/global.d.ts": [
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/@types/react/index.d.ts": [
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/prop-types/index.d.ts",
+        "../node_modules/@types/react/global.d.ts",
+        "../node_modules/csstype/index.d.ts"
+      ],
       "../node_modules/colors/index.d.ts": [
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/csstype/index.d.ts": [
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
@@ -911,7 +976,14 @@
         "../node_modules/ipaddr.js/lib/ipaddr.js.d.ts",
         "../node_modules/run-exclusive/lib/runexclusive.ts",
         "../node_modules/ts-md5/dist/md5.d.ts",
+        "../src/lib/dummyrender.tsx",
         "../src/lib/interfaces/index.ts"
+      ],
+      "../src/lib/dummyrender.tsx": [
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/react-dom/server/index.d.ts",
+        "../node_modules/@types/react/index.d.ts"
       ],
       "../src/lib/index.ts": [
         "../node_modules/@types/node/ts3.2/util.d.ts",
@@ -1265,7 +1337,36 @@
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
+      "../node_modules/@types/prop-types/index.d.ts": [
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/@types/react-dom/index.d.ts": [
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/react/index.d.ts"
+      ],
+      "../node_modules/@types/react-dom/server/index.d.ts": [
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/react/index.d.ts"
+      ],
+      "../node_modules/@types/react/global.d.ts": [
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/@types/react/index.d.ts": [
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/prop-types/index.d.ts",
+        "../node_modules/@types/react/global.d.ts",
+        "../node_modules/csstype/index.d.ts"
+      ],
       "../node_modules/colors/index.d.ts": [
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/csstype/index.d.ts": [
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
@@ -1468,7 +1569,13 @@
       "../node_modules/@types/node/vm.d.ts",
       "../node_modules/@types/node/worker_threads.d.ts",
       "../node_modules/@types/node/zlib.d.ts",
+      "../node_modules/@types/prop-types/index.d.ts",
+      "../node_modules/@types/react-dom/index.d.ts",
+      "../node_modules/@types/react-dom/server/index.d.ts",
+      "../node_modules/@types/react/global.d.ts",
+      "../node_modules/@types/react/index.d.ts",
       "../node_modules/colors/index.d.ts",
+      "../node_modules/csstype/index.d.ts",
       "../node_modules/ipaddr.js/lib/ipaddr.js.d.ts",
       "../node_modules/minimal-polyfills/map.ts",
       "../node_modules/minimal-polyfills/weakmap.ts",
@@ -1502,6 +1609,7 @@
       "../node_modules/typescript/lib/lib.es5.d.ts",
       "../node_modules/typescript/lib/lib.esnext.intl.d.ts",
       "../src/lib/cat.ts",
+      "../src/lib/dummyrender.tsx",
       "../src/lib/index.ts",
       "../src/lib/interfaces/cat.ts",
       "../src/lib/interfaces/dog.ts",

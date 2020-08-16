@@ -12,7 +12,8 @@
         "outDir": "./dist", // !important
         "noUnusedLocals": true, // !important
 		"noUnusedParameters": true, // !important
-        "strict": true // !important
+        "strict": true, // !important
+        "jsx": "react"
     },
     "filesGlob": [
         "src/**/*"
