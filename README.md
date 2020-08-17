@@ -1,4 +1,3 @@
-
 # my-dummy-npm-and-deno-module
 
 A demo project that serve as a tutorial on how to setup [Denoify](https://github.com/garronej/denoify).
@@ -6,27 +5,74 @@ A demo project that serve as a tutorial on how to setup [Denoify](https://github
 NOTE: For a new module name favor '\_' over '-' in the module name as it is
 a deno requirement not to use '\_'
 
-## Step 1: Provide port for dependencies.
+## Step 1: Dealing with unsupported Node builtins
 
-This demo project depends on three modules:
+As mentioned [the support for Node builtins](https://deno.land/std@0.65.0/node) is incomplete. 
+Many important modules like `net` or `https` are not currently available.  
+To make the matter worse you might run into some issues even with the module that are supposed
+to be supported as some port are incomplete and some types definition mismatches `@types/node`.  
 
-- ``"js-yaml"``: Is is already known by denoify, it is present in : [known-ports.jsonc](https://github.com/garronej/denoify/blob/master/known-ports.jsonc),  
-  There is nothing to do for ``js-yaml``. Let us assume however, for the sake of the tutorial that is is not know. We manually add an "denoPort" entry.
-  in ``package.json`` pointing to the available port:
+The solution is to wrap the problematic API inside a separate module and provide a custom implementation
+for Deno.
 
-```json
-"dependencies": {
-    "js-yaml": "^3.13.1"
-},
-"denoPorts": {
-    "js-yaml": "https://deno.land/x/js_yaml_port/js-yaml.js"
-},
+Let's say we need to compute a `sha256` hash. When we check in the [compatibility list](https://deno.land/std@0.65.0/node) 
+we can see that the node builtin `crypto` is not yet supported. 
+So what we do is we create [`hash.ts`](https://github.com/garronej/denoify/tree/master/src/lib/hash.ts) file where we put: 
+
+```typescript
+import * as crypto from "crypto";
+
+export function sha256(input: string): string {
+    return crypto
+        .createHash("sha256")
+        .update(input)
+        .digest("hex");
+}
 ```
 
-- ``"run-exclusive"``: We do not need to specify a deno port as [run-exclusive](https://github.com/garronej/run_exclusive) is a denoified module.
+And a another file [`hash.deno.ts`](https://github.com/garronej/denoify/tree/master/src/lib/hash.deno.ts) exposing the same function but with a Deno implementation:  
 
-- ``"ts-md5"``: (It is in ``known-ports.json`` but let us assume it is not ) One way to support this module is to fork the home repo of ts-md5 and setup denoify on this fork. 
-  We've done it [here](https://github.com/garronej/ts-md5). We can now specify our fork as a deno port.
+```typescript
+import { Sha256 } from "https://deno.land/std@0.65.0/hash/sha256.ts";
+
+export function sha256(input: string): string {
+
+    return new Sha256()
+        .update(input)
+        .hex();
+
+}
+```
+
+
+## Step 2: Enabling the module's hard dependencies to run on Deno
+
+We need to examine one by one all the module listed as `dependencies` in the `package.json`
+and provide a Deno port for the modules that requires it.
+All the dev dependencies can be ignored as they are not required to actually run the module.
+
+- ``"run-exclusive"``
+  We do not need to specify a deno port for this module as [run-exclusive](https://github.com/garronej/run_exclusive) 
+  is a denoified module.
+  We can use this module in our node code and Denoify will automatically replace the import statements when 
+  generating the Deno distribution.
+
+- `sha3`
+  The module is only used a file ( [`hash.ts`](https://github.com/garronej/denoify/tree/master/src/lib/hash.ts) ) that has 
+  a Deno counterpart ( [`hash.deno.ts`](https://github.com/garronej/denoify/tree/master/src/lib/hash.deno.ts) ) so we do not need
+  a Deno port for this dependency.
+
+- `react`, `react-dom` and `ipaddr.js`
+  Denoify has builtin import statement replacer for these modules. We do not need to specify any custom port. 
+  To know if a module is supported by default by Denoify you can check if there if there is [a import statement replacer for it](https://github.com/garronej/denoify/tree/master/src/bin/replacer) 
+  or if the module name is present in the [known-ports.json](https://github.com/garronej/denoify/blob/master/known-ports.jsonc) file.
+  **For the rest of the tutorial we will assume ``ts-md5`` and ``js-yaml`` are NOT known by Denoify.**
+
+- ``"ts-md5"``
+  One way to come up with a Deno port of a NPM module is to fork the home repo of the project, 
+  here [cotag/ts-md5](https://github.com/cotag/ts-md5), and setup denoify on the fork. 
+  We've done it [here](https://github.com/garronej/ts-md5). It is then possible to specify the fork as a `denoPort` of the module.  
+`package.json`:
 ```json
 "dependencies": {
     "ts-md5": "^1.2.7"
@@ -36,32 +82,101 @@ This demo project depends on three modules:
 },
 ```
 
--  `react`, `react-dom`, `ipaddr.js`,: Denoify has builtin import statement replacer for these modules, [see here](https://github.com/garronej/denoify/tree/master/src/bin/replacer). We do not need to specify any custom port.
+- ``"js-yaml"``
+  If you happen to know an existing port for a module you can directly provide the URL of the index. 
 
-We can ignore the dev dependencies as they are not mandatory to run the module.
+`package.json`:
+```json
+"dependencies": {
+    "js-yaml": "^3.13.1"
+},
+"denoPorts": {
+    "js-yaml": "https://deno.land/x/js_yaml_port/js-yaml.js"
+},
+```
+Be aware though that only `deno.land/x` and `raw.githubusercontent.com` URLs are supported 
+and this will only work if the Deno port exposes exactly the same way the NPM module does.
+For example if the NPM module is supposed to be imported like that `import * as Xxx from "xxx"` but the Deno
+port is supposed imported like this: `import Xxx from "xxx"` it won't work. 
+If you know your module can be imported in Deno using a ``pika`` or ``jspm`` URL the solution
+is to write a custom import statement replacer as shown in the next example. 
 
-NOTE: `denoPorts` entry only accept urls of types `https://deno.land/x/...` or `https://raw.github.com/...`.
-Github repo under the form of `<userOrOrg>/<repoName>` will only works with module that have been denoified ( like [garronej/tm-md5](https://github.com/garronej/ts-md5) )
+- `"left-pad"`
+  Here we don't want to go into the trouble of porting such a simple module, 
+  we can just create a local implementation of leftPad for Deno and ensure 
+  it is imported in place of [`left-pad`](https://www.npmjs.com/package/left-pad) in the Deno distribution.
 
-If you want to use urls from Pika, jspm or UNPKG you can but you have to write custom replacers.
+`src/tools/leftPad.deno.ts`:
+```typescript
+export function leftPad(str: string, maxLength: number){
+    return str.padStart(maxLength);
+}
+```  
+`src/bin/denoifyImportReplacer.ts`: 
+A import statement replacer is a trap offered by Denoify to give you the chance to specify exactly by
+what string you want the import/export statements to be replaced.
+The function will be called against each external import/export, the string returned by the
+function will replace the import statement in the deno dist. You should return `undefined` for the statements
+that you don't want to manually replace.
 
-## Step 2: Edit tsconfig.json 
+[see file](https://github.com/garronej/my_dummy_npm_and_deno_module/blob/master/src/bin/customReplacer.ts
 
-### Make sure you use the "outDir" option.
+`package.json`:
+You need to tell denoify where to find your replacer function.
+```json
+    "denoifyReplacer": "dist/bin/customReplacer.js"
+```
 
-Denoify reads the "outDir" field of the ``tsconfig.json`` filed to determine where to put the de generated source so it must be completed.
+This specific custom replacer will make sure that when Denoify run against `import * as lb from "left-pad"` in 
+`src/lib/Cat.ts` for example, the import statement be replaced by: `import { leftPad as lp } from "../tools/leftPad.ts";`  
+As mentioned earlier, custom replacer can be used to leverage ``pika`` and ``jspm``.
+For example Denoify replace:
+```typescript
+import * as ReactDOMServer from "react-dom";
+```
+by 
+```typescript
+// @deno-types="https://raw.githubusercontent.com/Soremwar/deno_types/master/react-dom/v16.13.1/server.d.ts"
+import ReactDOMServer from "https://dev.jspm.io/react-dom@16.13.1/server.js";
+```
+The replacer that makes this happen can be found [here](https://github.com/garronej/denoify/blob/master/src/bin/replacer/react-dom.ts). The version number that is passed to the replacer is the version number of the module installed 
+in the node_modules folder at the time Denoify is run.
+
+
+## Step 3: Edit `tsconfig.json`
+
+### Make sure you use the `"outDir"` compiler pption.
+
+Denoify reads the `"outDir"` field of the `tsconfig.json` filed to determine where to put the de generated source so it must be completed.
 The typical value to use is: 
 ```json
 {
     "compilerOptions": {
-        "outDir": "./dist"
+        "outDir": "dist/"
     }
+}
+```
+
+In this case the deno distribution will be placed in `deno_dist/k`.
+
+### Explicitly excludes the deno files from compilation
+
+``tsconfig.json``
+```json
+{
+    "exclude": [
+        "node_modules",
+        "dist/",
+        "deno_dist/",
+        "src/**/*.deno.ts",
+        "src/**/*.deno.tsx",
+    ]
 }
 ```
 
 ### Enable strict mode and fixes errors if any.
 
-By default deno has all strict compiler options enabled so if you want your module to run on deno regardless of the context you must set: 
+By default Deno has all strict compiler options enabled so if you want your module to run on deno regardless of the context you must set: 
 
 ```json
 {
@@ -84,19 +199,19 @@ function myFun(a): number{
     this.doSomething(a);
 }
 ```
-by:
+by
 ```typescript
 function myFun(this: any, a: any): number{
     this.doSomething(a);
 }
 ```
-If you don't know any better.  
+if you don't know any better.  
 
-For errors relating to something that can be null or undefined, replace:
+For errors related to something that can be `null` or `undefined`, replace:
 ```typescript
 x.doSomething();
 ```
-by:
+by
 ```typescript
 x!.doSomething();
 ```
@@ -138,27 +253,12 @@ const x=3; x;
 
 
 
-### Explicitly excludes the deno files from compilation
 
-``tsconfig.json``
-```json
-{
+## Edit your `npm` scripts
 
-    "exclude": [
-        "node_modules",
-        "dist",
-        "./deno_dist",
-        "./mod.ts"
-    ]
-}
-```
+First off, run `$ npm install --save-dev denoify` then add/edit the ``npm`` scripts:
 
-## Edit your ``npm`` scripts
-
-First off, run ``$ npm install --save-dev denoify`` then add/edit
-the ``npm`` scripts.
-
-``package.json``
+``package.json``:
 ```json
     "devDependencies": {
         "denoify": "^4.0.1",
@@ -170,22 +270,25 @@ the ``npm`` scripts.
 
 ## Building
 
-Now every time you will run `$ npm run build` the sources for deno will be updated in `/deno_dist/`
+Now every time you will run `$ npm run build` the sources for deno will be updated in `deno_dist/`
 
-It is also a good idea to add scripts to run tests on node and on deno.
+It is also a good idea to add scripts to run tests on Node and on Deno.
 Note that in this repo we run the tests with the ``--allow-read`` because we use
 ``fs`` but if you module do not access files on the disk you don't need it.
 
 ## Create a new GitHub release every time you publish on npm.
 
-Just after running ``$ npm publish`` got to your GitHub repo pages -> release -> create new release ( or draft ne release ) and tag version enter ``v0.2.9`` matching the current version in your ``package.json`` file.
+Just after running ``$ npm publish`` got to your GitHub repo pages -> release -> create new release ( or draft new release ) and tag version enter ``v0.3.0`` matching the current version in your ``package.json`` file.
 
 ## (Optional) Publish your module on deno.land
 
 Navigate to [deno.land/x](https://deno.land/x), click ``Add a module`` then follow the instruction.
 Use `deno_dist/` as subdirectory when asked.
 
-# Accessing files on the disk.
+# Accessing files on the disk
+
+<details>
+  <summary>Click to expand!</summary>
 
 Keep in mind that in Deno there is no ``node_modules`` sitting on the disk at runtime.  
 
@@ -217,6 +320,8 @@ your module published this won’t work on Deno anymore for the same reason
 it won’t work in the Browser, the ``database.json`` file is present 
 on the disk at runtime.  
 
+</details>
+
 # Conclusion
 
 It is now possible to use your module on node using ( assuming you have published it with ``npm publish`` ):
@@ -230,14 +335,13 @@ import { Cat } from "my-dummy-npm-and-deno-module"
 And on deno with:
 
 ```typescript
-import { Cat } from "https://deno.land/x/my_dummy_npm_and_deno_module@v0.2.9/mod.ts";
+import { Cat } from "https://deno.land/x/my_dummy_npm_and_deno_module@v0.3.0/mod.ts";
 ```
-or if you haven't published on Deno.land:
-
+or if you haven't published on [deno.land/x](https://deno.land/x):
 ```typescript
-import { Cat } from "https://raw.githubusercontent.com/garronej/my_dummy_npm_and_deno_module/v0.2.9/deno_dist/mod.ts";
+import { Cat } from "https://raw.githubusercontent.com/garronej/my_dummy_npm_and_deno_module/v0.3.0/deno_dist/mod.ts";
 ```
 
 On top of that this module can now be used as a dependency in other modules that uses ``denoify``.
 
-If you want to avoid tracking the `deno_dist/` directory and automates the workflow checkout [denoify_ci](https://github.com/garronej/denoify_ci)
+If you want to avoid tracking the `deno_dist/` directory and automates the publishing process checkout [denoify_ci](https://github.com/garronej/denoify_ci)

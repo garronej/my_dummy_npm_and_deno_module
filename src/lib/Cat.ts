@@ -8,6 +8,8 @@ import * as path from "path";
 import { EventEmitter } from "events";
 import * as ipaddr from "ipaddr.js";
 import { dummyRender } from "./dummyRender";
+import * as lp from "left-pad";
+import { sha256, sha3_512 } from "./hash";
 
 
 console.assert(runExclusive.buildMethod === buildMethod );
@@ -23,8 +25,16 @@ export class Cat extends EventEmitter implements interfaces.Cat {
         return load('hello: world');
     }
 
-    testMd5(){
-        return Md5.hashStr("Foo bar");
+    testHash(type: "sha256" | "sha3" | "md5"){
+
+        const input= "Hello World";
+
+        switch(type){
+            case "md5": return Md5.hashStr(input);
+            case "sha256": return sha256(input);
+            case "sha3": return sha3_512(input);
+        }
+
     }
 
     spell = runExclusive.buildMethod(
@@ -65,6 +75,11 @@ export class Cat extends EventEmitter implements interfaces.Cat {
     dummyRender() {
         return dummyRender({ "foo": "Hello Isomorphic React" });
     }
+
+    testLeftPadWith10(str: string): string {
+        return lp(str, 10);
+    }
+
 
 }
 

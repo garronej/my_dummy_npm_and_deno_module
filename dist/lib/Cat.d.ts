@@ -7,12 +7,13 @@ export declare class Cat extends EventEmitter implements interfaces.Cat {
     gender: "FEMALE";
     size: "SMALL";
     testJsYaml(): any;
-    testMd5(): string | Int32Array;
+    testHash(type: "sha256" | "sha3" | "md5"): string | Int32Array;
     spell: (alphabet: [string], letter: string) => Promise<void>;
     spell2: (alphabet: [string], letter: string) => Promise<void>;
     pathJoin(...args: string[]): string;
     makeSound(): void;
     getIpV4Octets(ip: string): number[];
     dummyRender(): string;
+    testLeftPadWith10(str: string): string;
 }
 export declare function createCat(): interfaces.Cat;

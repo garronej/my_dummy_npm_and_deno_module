@@ -8,6 +8,8 @@ import * as path from "https://deno.land/std@0.65.0/node/path.ts";
 import { EventEmitter } from "https://deno.land/std@0.65.0/node/events.ts";
 import ipaddr from "https://jspm.dev/ipaddr.js@1.9.1";
 import { dummyRender } from "./dummyRender.tsx";
+import { leftPad as lp } from "../tools/leftPad.ts";
+import { sha256, sha3_512 } from "./hash.ts";
 
 
 console.assert(runExclusive.buildMethod === buildMethod );
@@ -23,8 +25,16 @@ export class Cat extends EventEmitter implements interfaces.Cat {
         return load('hello: world');
     }
 
-    testMd5(){
-        return Md5.hashStr("Foo bar");
+    testHash(type: "sha256" | "sha3" | "md5"){
+
+        const input= "Hello World";
+
+        switch(type){
+            case "md5": return Md5.hashStr(input);
+            case "sha256": return sha256(input);
+            case "sha3": return sha3_512(input);
+        }
+
     }
 
     spell = runExclusive.buildMethod(
@@ -65,6 +75,11 @@ export class Cat extends EventEmitter implements interfaces.Cat {
     dummyRender() {
         return dummyRender({ "foo": "Hello Isomorphic React" });
     }
+
+    testLeftPadWith10(str: string): string {
+        return lp(str, 10);
+    }
+
 
 }
 

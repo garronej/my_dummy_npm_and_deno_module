@@ -136,6 +136,91 @@
         "signature": "89bf2b7a601b73ea4311eda9c41f86a58994fec1bee3b87c4a14d68d9adcdcbd",
         "affectsGlobalScope": true
       },
+      "../node_modules/denoify/tools/is404.d.ts": {
+        "version": "99e2d45d6cb583e3dda81af19575addf2db1541ab156684a196ccf95e73d063b",
+        "signature": "99e2d45d6cb583e3dda81af19575addf2db1541ab156684a196ccf95e73d063b",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/denoify/tools/urljoin.d.ts": {
+        "version": "f49d7e8e041c68b674a912ff7de990b86ba6b5111009e1464b592f947468107a",
+        "signature": "f49d7e8e041c68b674a912ff7de990b86ba6b5111009e1464b592f947468107a",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/denoify/tools/version.d.ts": {
+        "version": "0fbc21539ff733c5e5b5ad06d52bbf0a4ab73e6be46c947317e2f0d359e995d9",
+        "signature": "0fbc21539ff733c5e5b5ad06d52bbf0a4ab73e6be46c947317e2f0d359e995d9",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/evt/tools/typesafety/assert.d.ts": {
+        "version": "ffe7d2a49bdd384d8f7f8c5d5202d1b6b190f0cc80e535e41bc96f7587f82f5b",
+        "signature": "ffe7d2a49bdd384d8f7f8c5d5202d1b6b190f0cc80e535e41bc96f7587f82f5b",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/evt/tools/typesafety/asyncreturntype.d.ts": {
+        "version": "4f542cc3b606d4217cf0b22e86d1b02d17fa428d9e71ca192626dfb141a3768b",
+        "signature": "4f542cc3b606d4217cf0b22e86d1b02d17fa428d9e71ca192626dfb141a3768b",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/evt/tools/typesafety/exclude.d.ts": {
+        "version": "b2cd98707f4b57d1045434e86cf21315a50af70f8768079ac71a70f11210919f",
+        "signature": "b2cd98707f4b57d1045434e86cf21315a50af70f8768079ac71a70f11210919f",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/evt/tools/typesafety/id.d.ts": {
+        "version": "80c302efbb4683fb75afb30e1a5f319ed6ebd84ff02327cadcfe2d53b559eeb7",
+        "signature": "80c302efbb4683fb75afb30e1a5f319ed6ebd84ff02327cadcfe2d53b559eeb7",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/evt/tools/typesafety/matchvoid.d.ts": {
+        "version": "549f3bd8b575c5345ecafc490b17e3d356ce0b50fae87ffb795f9732920012b6",
+        "signature": "549f3bd8b575c5345ecafc490b17e3d356ce0b50fae87ffb795f9732920012b6",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/evt/tools/typesafety/objectkeys.d.ts": {
+        "version": "4da2684f4596bd222840b428282b011560505fd93efb2de24709418ec33ad614",
+        "signature": "4da2684f4596bd222840b428282b011560505fd93efb2de24709418ec33ad614",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/evt/tools/typesafety/typeguard.d.ts": {
+        "version": "a422f83992eacfad8753c4b68f60cc8b65726f0dad038105031764a1d1636f50",
+        "signature": "a422f83992eacfad8753c4b68f60cc8b65726f0dad038105031764a1d1636f50",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/evt/tools/typesafety/unpackpromise.d.ts": {
+        "version": "c8a96f4e65100dc133ee9feaf486b9a52212f354bd44db6a2080a9267d8bb704",
+        "signature": "c8a96f4e65100dc133ee9feaf486b9a52212f354bd44db6a2080a9267d8bb704",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/evt/tools/typesafety/unpacktypeguard.d.ts": {
+        "version": "fa2905239c92187e357130fc3114eefa64c9e6f48ae29fb0eb10674d99923bb2",
+        "signature": "fa2905239c92187e357130fc3114eefa64c9e6f48ae29fb0eb10674d99923bb2",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/evt/tools/typesafety/index.d.ts": {
+        "version": "4d4d9f19b33d8603ee90ed1fbdaf6bdf6b8497c9c041796e1c547467f1818e04",
+        "signature": "4d4d9f19b33d8603ee90ed1fbdaf6bdf6b8497c9c041796e1c547467f1818e04",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/denoify/lib/types/parsedimportexportstatement.d.ts": {
+        "version": "b078ad60a009bc67d2e4cac225579634785ba9d27f19b3e75569dbb08f43d551",
+        "signature": "b078ad60a009bc67d2e4cac225579634785ba9d27f19b3e75569dbb08f43d551",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/denoify/lib/replacer.d.ts": {
+        "version": "8d4fd4b84aee97d2df3e26985e42b0520f1f2effeb34ff0f6de975039069f13a",
+        "signature": "8d4fd4b84aee97d2df3e26985e42b0520f1f2effeb34ff0f6de975039069f13a",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/denoify/lib/index.d.ts": {
+        "version": "b057f7f9cf2f2492a955c388055ebe7b0491ea98c1c06f546a3895b0420b2881",
+        "signature": "b057f7f9cf2f2492a955c388055ebe7b0491ea98c1c06f546a3895b0420b2881",
+        "affectsGlobalScope": false
+      },
+      "../src/bin/customreplacer.ts": {
+        "version": "6abaa7a31d8c91d333cfec9cc3f82638705418deb5109aaae638671d24dcedeb",
+        "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
+        "affectsGlobalScope": false
+      },
       "../src/lib/types/color.ts": {
         "version": "5c7102868ac26763fb7833f32ec681e1db7386f58efa464c42a5f45d20a09219",
         "signature": "3987ee01107e89c117973273c73ed1f1f3893605e4ecfdb7db7ca9593faa853c",
@@ -228,9 +313,24 @@
         "signature": "fd08543ab509fc909b2c35358769c97463ce951179ff55b5024c868d28250d94",
         "affectsGlobalScope": false
       },
+      "../node_modules/left-pad/index.d.ts": {
+        "version": "1a4c0232356bd6ff92d238357429374388794d6049426bc5bb05623e7a990ff1",
+        "signature": "1a4c0232356bd6ff92d238357429374388794d6049426bc5bb05623e7a990ff1",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/sha3/index.d.ts": {
+        "version": "06c2b0a7c6769e36275469923b3dfee6d09a1bf1986cc7f899544e8d68717dff",
+        "signature": "06c2b0a7c6769e36275469923b3dfee6d09a1bf1986cc7f899544e8d68717dff",
+        "affectsGlobalScope": false
+      },
+      "../src/lib/hash.ts": {
+        "version": "c7f060edbaf59cfca6ff2ee9cb8efcdabbe2b2372db370e03e79e7ca2f50cd12",
+        "signature": "3a27f30dac30d274d6693619b81eb5a223d9e14235b9fdc88e17ee80a3a53a24",
+        "affectsGlobalScope": false
+      },
       "../src/lib/cat.ts": {
-        "version": "9b4e0d2ec692b6934d30d34c7a11f191e4286b6dc4dffdd387dedba9a11503fe",
-        "signature": "8b64ed3d63d041c39e4f03daaccac4c36ff4236e55352101dd033ece4944b317",
+        "version": "47fee079d109ebca2e20bf4ec3e11b6c00e183f2a77a512554d8724a0697e131",
+        "signature": "3412556b79d4599fab81dc5b99e08dcd6cc8bd859d89dd9389a8dd6c8d3c5a8d",
         "affectsGlobalScope": false
       },
       "../src/lib/index.ts": {
@@ -244,7 +344,7 @@
         "affectsGlobalScope": false
       },
       "../src/test/test1.ts": {
-        "version": "8bbcd5f258d2dcb177213f06c57df1044b2f181c4d0ed4a00789c465eb98de90",
+        "version": "5b33f6b5f402b3cf283712d6b17997c2c17545c205d985304b17ae3d31aeddfc",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
         "affectsGlobalScope": false
       },
@@ -837,7 +937,91 @@
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
+      "../node_modules/denoify/lib/index.d.ts": [
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/denoify/lib/replacer.d.ts",
+        "../node_modules/denoify/tools/is404.d.ts",
+        "../node_modules/denoify/tools/urljoin.d.ts",
+        "../node_modules/denoify/tools/version.d.ts",
+        "../node_modules/evt/tools/typesafety/index.d.ts"
+      ],
+      "../node_modules/denoify/lib/replacer.d.ts": [
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/denoify/lib/types/parsedimportexportstatement.d.ts"
+      ],
+      "../node_modules/denoify/lib/types/parsedimportexportstatement.d.ts": [
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/denoify/tools/is404.d.ts": [
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/denoify/tools/urljoin.d.ts": [
+        "../node_modules/@types/node/path.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/denoify/tools/version.d.ts": [
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/evt/tools/typesafety/assert.d.ts": [
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/evt/tools/typesafety/asyncreturntype.d.ts": [
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/evt/tools/typesafety/exclude.d.ts": [
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/evt/tools/typesafety/id.d.ts": [
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/evt/tools/typesafety/index.d.ts": [
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/evt/tools/typesafety/assert.d.ts",
+        "../node_modules/evt/tools/typesafety/asyncreturntype.d.ts",
+        "../node_modules/evt/tools/typesafety/exclude.d.ts",
+        "../node_modules/evt/tools/typesafety/id.d.ts",
+        "../node_modules/evt/tools/typesafety/matchvoid.d.ts",
+        "../node_modules/evt/tools/typesafety/objectkeys.d.ts",
+        "../node_modules/evt/tools/typesafety/typeguard.d.ts",
+        "../node_modules/evt/tools/typesafety/unpackpromise.d.ts",
+        "../node_modules/evt/tools/typesafety/unpacktypeguard.d.ts"
+      ],
+      "../node_modules/evt/tools/typesafety/matchvoid.d.ts": [
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/evt/tools/typesafety/objectkeys.d.ts": [
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/evt/tools/typesafety/typeguard.d.ts": [
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/evt/tools/typesafety/unpackpromise.d.ts": [
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/evt/tools/typesafety/unpacktypeguard.d.ts": [
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
       "../node_modules/ipaddr.js/lib/ipaddr.js.d.ts": [
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/left-pad/index.d.ts": [
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
@@ -854,6 +1038,10 @@
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/minimal-polyfills/weakmap.ts"
+      ],
+      "../node_modules/sha3/index.d.ts": [
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
       ],
       "../node_modules/ts-md5/dist/md5.d.ts": [
         "../node_modules/@types/node/ts3.2/util.d.ts",
@@ -967,6 +1155,13 @@
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
+      "../src/bin/customreplacer.ts": [
+        "../node_modules/@types/node/path.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/denoify/lib/index.d.ts",
+        "../node_modules/evt/tools/typesafety/index.d.ts"
+      ],
       "../src/lib/cat.ts": [
         "../node_modules/@types/js-yaml/index.d.ts",
         "../node_modules/@types/node/events.d.ts",
@@ -974,9 +1169,11 @@
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/ipaddr.js/lib/ipaddr.js.d.ts",
+        "../node_modules/left-pad/index.d.ts",
         "../node_modules/run-exclusive/lib/runexclusive.ts",
         "../node_modules/ts-md5/dist/md5.d.ts",
         "../src/lib/dummyrender.tsx",
+        "../src/lib/hash.ts",
         "../src/lib/interfaces/index.ts"
       ],
       "../src/lib/dummyrender.tsx": [
@@ -984,6 +1181,12 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/react-dom/server/index.d.ts",
         "../node_modules/@types/react/index.d.ts"
+      ],
+      "../src/lib/hash.ts": [
+        "../node_modules/@types/node/crypto.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/sha3/index.d.ts"
       ],
       "../src/lib/index.ts": [
         "../node_modules/@types/node/ts3.2/util.d.ts",
@@ -1370,7 +1573,95 @@
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
+      "../node_modules/denoify/lib/index.d.ts": [
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/denoify/lib/replacer.d.ts",
+        "../node_modules/denoify/tools/is404.d.ts",
+        "../node_modules/denoify/tools/urljoin.d.ts",
+        "../node_modules/denoify/tools/version.d.ts",
+        "../node_modules/evt/tools/typesafety/index.d.ts"
+      ],
+      "../node_modules/denoify/lib/replacer.d.ts": [
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/denoify/lib/types/parsedimportexportstatement.d.ts"
+      ],
+      "../node_modules/denoify/lib/types/parsedimportexportstatement.d.ts": [
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/denoify/tools/is404.d.ts": [
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/denoify/tools/urljoin.d.ts": [
+        "../node_modules/@types/node/path.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/denoify/tools/version.d.ts": [
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/evt/tools/typesafety/assert.d.ts": [
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/evt/tools/typesafety/asyncreturntype.d.ts": [
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/evt/tools/typesafety/exclude.d.ts": [
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/evt/tools/typesafety/id.d.ts": [
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/evt/tools/typesafety/index.d.ts": [
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/evt/tools/typesafety/assert.d.ts",
+        "../node_modules/evt/tools/typesafety/asyncreturntype.d.ts",
+        "../node_modules/evt/tools/typesafety/exclude.d.ts",
+        "../node_modules/evt/tools/typesafety/id.d.ts",
+        "../node_modules/evt/tools/typesafety/matchvoid.d.ts",
+        "../node_modules/evt/tools/typesafety/objectkeys.d.ts",
+        "../node_modules/evt/tools/typesafety/typeguard.d.ts",
+        "../node_modules/evt/tools/typesafety/unpackpromise.d.ts",
+        "../node_modules/evt/tools/typesafety/unpacktypeguard.d.ts"
+      ],
+      "../node_modules/evt/tools/typesafety/matchvoid.d.ts": [
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/evt/tools/typesafety/objectkeys.d.ts": [
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/evt/tools/typesafety/typeguard.d.ts": [
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/evt/tools/typesafety/unpackpromise.d.ts": [
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/evt/tools/typesafety/unpacktypeguard.d.ts": [
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
       "../node_modules/ipaddr.js/lib/ipaddr.js.d.ts": [
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/left-pad/index.d.ts": [
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/sha3/index.d.ts": [
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
@@ -1576,10 +1867,28 @@
       "../node_modules/@types/react/index.d.ts",
       "../node_modules/colors/index.d.ts",
       "../node_modules/csstype/index.d.ts",
+      "../node_modules/denoify/lib/index.d.ts",
+      "../node_modules/denoify/lib/replacer.d.ts",
+      "../node_modules/denoify/lib/types/parsedimportexportstatement.d.ts",
+      "../node_modules/denoify/tools/is404.d.ts",
+      "../node_modules/denoify/tools/urljoin.d.ts",
+      "../node_modules/denoify/tools/version.d.ts",
+      "../node_modules/evt/tools/typesafety/assert.d.ts",
+      "../node_modules/evt/tools/typesafety/asyncreturntype.d.ts",
+      "../node_modules/evt/tools/typesafety/exclude.d.ts",
+      "../node_modules/evt/tools/typesafety/id.d.ts",
+      "../node_modules/evt/tools/typesafety/index.d.ts",
+      "../node_modules/evt/tools/typesafety/matchvoid.d.ts",
+      "../node_modules/evt/tools/typesafety/objectkeys.d.ts",
+      "../node_modules/evt/tools/typesafety/typeguard.d.ts",
+      "../node_modules/evt/tools/typesafety/unpackpromise.d.ts",
+      "../node_modules/evt/tools/typesafety/unpacktypeguard.d.ts",
       "../node_modules/ipaddr.js/lib/ipaddr.js.d.ts",
+      "../node_modules/left-pad/index.d.ts",
       "../node_modules/minimal-polyfills/map.ts",
       "../node_modules/minimal-polyfills/weakmap.ts",
       "../node_modules/run-exclusive/lib/runexclusive.ts",
+      "../node_modules/sha3/index.d.ts",
       "../node_modules/ts-md5/dist/md5.d.ts",
       "../node_modules/typescript/lib/lib.es2015.collection.d.ts",
       "../node_modules/typescript/lib/lib.es2015.core.d.ts",
@@ -1608,8 +1917,10 @@
       "../node_modules/typescript/lib/lib.es2020.bigint.d.ts",
       "../node_modules/typescript/lib/lib.es5.d.ts",
       "../node_modules/typescript/lib/lib.esnext.intl.d.ts",
+      "../src/bin/customreplacer.ts",
       "../src/lib/cat.ts",
       "../src/lib/dummyrender.tsx",
+      "../src/lib/hash.ts",
       "../src/lib/index.ts",
       "../src/lib/interfaces/cat.ts",
       "../src/lib/interfaces/dog.ts",

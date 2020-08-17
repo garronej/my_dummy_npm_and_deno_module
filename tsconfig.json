@@ -9,7 +9,7 @@
         "declaration": true,
         "newLine": "LF",
 		"incremental": true, 
-        "outDir": "./dist", // !important
+        "outDir": "dist/", // !important
         "noUnusedLocals": true, // !important
 		"noUnusedParameters": true, // !important
         "strict": true, // !important
@@ -19,9 +19,10 @@
         "src/**/*"
     ],
     "exclude": [ // !important
-        "node_modules",
-        "dist",
-        "./deno_dist",
-        "./mod.ts"
+        "node_modules/",
+        "dist/",
+        "deno_dist/",
+        "src/**/*.deno.ts",
+        "src/**/*.deno.tsx"
     ]
 }

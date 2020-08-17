@@ -58,6 +58,8 @@ var path = require("path");
 var events_1 = require("events");
 var ipaddr = require("ipaddr.js");
 var dummyRender_1 = require("./dummyRender");
+var lp = require("left-pad");
+var hash_1 = require("./hash");
 console.assert(runExclusive.buildMethod === runExclusive_1.buildMethod);
 var Cat = /** @class */ (function (_super) {
     __extends(Cat, _super);
@@ -94,8 +96,13 @@ var Cat = /** @class */ (function (_super) {
     Cat.prototype.testJsYaml = function () {
         return js_yaml_1.load('hello: world');
     };
-    Cat.prototype.testMd5 = function () {
-        return ts_md5_1.Md5.hashStr("Foo bar");
+    Cat.prototype.testHash = function (type) {
+        var input = "Hello World";
+        switch (type) {
+            case "md5": return ts_md5_1.Md5.hashStr(input);
+            case "sha256": return hash_1.sha256(input);
+            case "sha3": return hash_1.sha3_512(input);
+        }
     };
     Cat.prototype.pathJoin = function () {
         var args = [];
@@ -112,6 +119,9 @@ var Cat = /** @class */ (function (_super) {
     };
     Cat.prototype.dummyRender = function () {
         return dummyRender_1.dummyRender({ "foo": "Hello Isomorphic React" });
+    };
+    Cat.prototype.testLeftPadWith10 = function (str) {
+        return lp(str, 10);
     };
     return Cat;
 }(events_1.EventEmitter));
