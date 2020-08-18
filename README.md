@@ -119,7 +119,7 @@ The function will be called against each external import/export, the string retu
 function will replace the import statement in the deno dist. You should return `undefined` for the statements
 that you don't want to manually replace.
 
-[see file](https://github.com/garronej/my_dummy_npm_and_deno_module/blob/master/src/bin/customReplacer.ts
+[see file](https://github.com/garronej/my_dummy_npm_and_deno_module/blob/master/src/bin/customReplacer.ts)
 
 `package.json`:
 You need to tell denoify where to find your replacer function.
