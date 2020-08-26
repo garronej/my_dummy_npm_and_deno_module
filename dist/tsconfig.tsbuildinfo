@@ -217,7 +217,7 @@
         "affectsGlobalScope": false
       },
       "../src/bin/customreplacer.ts": {
-        "version": "6abaa7a31d8c91d333cfec9cc3f82638705418deb5109aaae638671d24dcedeb",
+        "version": "db0d8852f13ab612493bd348942a5ded564060cd563f1eeb3b9b479b7813ac87",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
         "affectsGlobalScope": false
       },
@@ -289,8 +289,8 @@
         "affectsGlobalScope": true
       },
       "../node_modules/csstype/index.d.ts": {
-        "version": "859b1245cdfd0d6e0752cdb59913e36fb2946e919f5d99846ef7f8ab45d5735e",
-        "signature": "859b1245cdfd0d6e0752cdb59913e36fb2946e919f5d99846ef7f8ab45d5735e",
+        "version": "b3a4ee9791cdd4f5029b3ffe60b9cae1ac308a4238b0444f40a5222e4ecc5cc1",
+        "signature": "b3a4ee9791cdd4f5029b3ffe60b9cae1ac308a4238b0444f40a5222e4ecc5cc1",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/prop-types/index.d.ts": {
@@ -299,8 +299,8 @@
         "affectsGlobalScope": false
       },
       "../node_modules/@types/react/index.d.ts": {
-        "version": "b0de1737a447411ed29ff2cf75b82b9f4e89791337f743c3b6bcbd05a95ec524",
-        "signature": "b0de1737a447411ed29ff2cf75b82b9f4e89791337f743c3b6bcbd05a95ec524",
+        "version": "1dd4a441ede7519b77c090cacc312e857dfac7483e2a4c08740c9758ce33faa9",
+        "signature": "1dd4a441ede7519b77c090cacc312e857dfac7483e2a4c08740c9758ce33faa9",
         "affectsGlobalScope": true
       },
       "../node_modules/@types/react-dom/server/index.d.ts": {
@@ -1621,17 +1621,17 @@
         "../node_modules/@types/node/util.d.ts"
       ],
       "../node_modules/evt/tools/typesafety/index.d.ts": [
+        "../../denoify/node_modules/evt/tools/typesafety/assert.d.ts",
+        "../../denoify/node_modules/evt/tools/typesafety/asyncreturntype.d.ts",
+        "../../denoify/node_modules/evt/tools/typesafety/exclude.d.ts",
+        "../../denoify/node_modules/evt/tools/typesafety/id.d.ts",
+        "../../denoify/node_modules/evt/tools/typesafety/matchvoid.d.ts",
+        "../../denoify/node_modules/evt/tools/typesafety/objectkeys.d.ts",
+        "../../denoify/node_modules/evt/tools/typesafety/typeguard.d.ts",
+        "../../denoify/node_modules/evt/tools/typesafety/unpackpromise.d.ts",
+        "../../denoify/node_modules/evt/tools/typesafety/unpacktypeguard.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/evt/tools/typesafety/assert.d.ts",
-        "../node_modules/evt/tools/typesafety/asyncreturntype.d.ts",
-        "../node_modules/evt/tools/typesafety/exclude.d.ts",
-        "../node_modules/evt/tools/typesafety/id.d.ts",
-        "../node_modules/evt/tools/typesafety/matchvoid.d.ts",
-        "../node_modules/evt/tools/typesafety/objectkeys.d.ts",
-        "../node_modules/evt/tools/typesafety/typeguard.d.ts",
-        "../node_modules/evt/tools/typesafety/unpackpromise.d.ts",
-        "../node_modules/evt/tools/typesafety/unpacktypeguard.d.ts"
+        "../node_modules/@types/node/util.d.ts"
       ],
       "../node_modules/evt/tools/typesafety/matchvoid.d.ts": [
         "../node_modules/@types/node/ts3.2/util.d.ts",

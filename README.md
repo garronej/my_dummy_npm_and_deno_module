@@ -77,9 +77,11 @@ All the dev dependencies can be ignored as they are not required to actually run
 "dependencies": {
     "ts-md5": "^1.2.7"
 }
-"denoPorts": {
-    "ts-md5": "garronej/ts-md5"
-},
+"denoify": {
+    "ports": {
+        "ts-md5": "garronej/ts-md5"
+    }
+}
 ```
 
 - ``"js-yaml"``
@@ -90,9 +92,11 @@ All the dev dependencies can be ignored as they are not required to actually run
 "dependencies": {
     "js-yaml": "^3.13.1"
 },
-"denoPorts": {
-    "js-yaml": "https://deno.land/x/js_yaml_port/js-yaml.js"
-},
+"denoify": {
+    "ports": {
+        "js-yaml": "https://deno.land/x/js_yaml_port/js-yaml.js"
+    }
+}
 ```
 Be aware though that only `deno.land/x` and `raw.githubusercontent.com` URLs are supported 
 and this will only work if the Deno port exposes exactly the same way the NPM module does.
@@ -124,7 +128,9 @@ that you don't want to manually replace.
 `package.json`:
 You need to tell denoify where to find your replacer function.
 ```json
-    "denoifyReplacer": "dist/bin/customReplacer.js"
+"denoify": {
+    "replacer": "dist/bin/customReplacer.js"
+}
 ```
 
 This specific custom replacer will make sure that when Denoify run against `import * as lb from "left-pad"` in 
@@ -254,7 +260,7 @@ const x=3; x;
 
 
 
-## Edit your `npm` scripts
+## Step 4: Edit your `npm` scripts
 
 First off, run `$ npm install --save-dev denoify` then add/edit the ``npm`` scripts:
 
@@ -268,6 +274,22 @@ First off, run `$ npm install --save-dev denoify` then add/edit the ``npm`` scri
     }
 ```
 
+
+## Step 5: Chose what files you wish to include in the `deno_dist` directory.
+
+By default, if present, the `README.md` and the `LICENSE` files are copied over 
+the `deno_dist` directory. If you wish to includes other files you can use the
+denoify `includes` option:
+`package.json`
+
+```json
+"denoify": {
+    "includes": [ ... ]
+}
+```
+
+Have a look at the [`package.json`](https://github.com/garronej/my_dummy_npm_and_deno_module/blob/master/package.json) for a configuration example.
+
 ## Building
 
 Now every time you will run `$ npm run build` the sources for deno will be updated in `deno_dist/`
@@ -278,7 +300,7 @@ Note that in this repo we run the tests with the ``--allow-read`` because we use
 
 ## Create a new GitHub release every time you publish on npm.
 
-Just after running ``$ npm publish`` got to your GitHub repo pages -> release -> create new release ( or draft new release ) and tag version enter ``v0.3.0`` matching the current version in your ``package.json`` file.
+Just after running ``$ npm publish`` got to your GitHub repo pages -> release -> create new release ( or draft new release ) and tag version enter ``v0.4.0`` matching the current version in your ``package.json`` file.
 
 ## (Optional) Publish your module on deno.land
 
@@ -335,11 +357,11 @@ import { Cat } from "my-dummy-npm-and-deno-module"
 And on deno with:
 
 ```typescript
-import { Cat } from "https://deno.land/x/my_dummy_npm_and_deno_module@v0.3.0/mod.ts";
+import { Cat } from "https://deno.land/x/my_dummy_npm_and_deno_module@v0.4.0/mod.ts";
 ```
 or if you haven't published on [deno.land/x](https://deno.land/x):
 ```typescript
-import { Cat } from "https://raw.githubusercontent.com/garronej/my_dummy_npm_and_deno_module/v0.3.0/deno_dist/mod.ts";
+import { Cat } from "https://raw.githubusercontent.com/garronej/my_dummy_npm_and_deno_module/v0.4.0/deno_dist/mod.ts";
 ```
 
 On top of that this module can now be used as a dependency in other modules that uses ``denoify``.

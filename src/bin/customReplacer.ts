@@ -1,4 +1,4 @@
-//@denoify-ignore
+// @denoify-ignore
 
 import { makeThisModuleAnExecutableReplacer } from "denoify";
 import { assert } from "evt/tools/typeSafety";

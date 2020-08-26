@@ -77,9 +77,11 @@ All the dev dependencies can be ignored as they are not required to actually run
 "dependencies": {
     "ts-md5": "^1.2.7"
 }
-"denoPorts": {
-    "ts-md5": "garronej/ts-md5"
-},
+"denoify": {
+    "ports": {
+        "ts-md5": "garronej/ts-md5"
+    }
+}
 ```
 
 - ``"js-yaml"``
@@ -90,9 +92,11 @@ All the dev dependencies can be ignored as they are not required to actually run
 "dependencies": {
     "js-yaml": "^3.13.1"
 },
-"denoPorts": {
-    "js-yaml": "https://deno.land/x/js_yaml_port/js-yaml.js"
-},
+"denoify": {
+    "ports": {
+        "js-yaml": "https://deno.land/x/js_yaml_port/js-yaml.js"
+    }
+}
 ```
 Be aware though that only `deno.land/x` and `raw.githubusercontent.com` URLs are supported 
 and this will only work if the Deno port exposes exactly the same way the NPM module does.
@@ -119,12 +123,14 @@ The function will be called against each external import/export, the string retu
 function will replace the import statement in the deno dist. You should return `undefined` for the statements
 that you don't want to manually replace.
 
-[see file](https://github.com/garronej/my_dummy_npm_and_deno_module/blob/master/src/bin/customReplacer.ts
+[see file](https://github.com/garronej/my_dummy_npm_and_deno_module/blob/master/src/bin/customReplacer.ts)
 
 `package.json`:
 You need to tell denoify where to find your replacer function.
 ```json
-    "denoifyReplacer": "dist/bin/customReplacer.js"
+"denoify": {
+    "replacer": "dist/bin/customReplacer.js"
+}
 ```
 
 This specific custom replacer will make sure that when Denoify run against `import * as lb from "left-pad"` in 
@@ -254,7 +260,7 @@ const x=3; x;
 
 
 
-## Edit your `npm` scripts
+## Step 4: Edit your `npm` scripts
 
 First off, run `$ npm install --save-dev denoify` then add/edit the ``npm`` scripts:
 
@@ -267,6 +273,22 @@ First off, run `$ npm install --save-dev denoify` then add/edit the ``npm`` scri
         "build": "tsc && denoify",
     }
 ```
+
+
+## Step 5: Chose what files you wish to include in the `deno_dist` directory.
+
+By default, if present, the `README.md` and the `LICENSE` files are copied over 
+the `deno_dist` directory. If you wish to includes other files you can use the
+denoify `includes` option:
+`package.json`
+
+```json
+"denoify": {
+    "includes": [ ... ]
+}
+```
+
+Have a look at the [`package.json`](https://github.com/garronej/my_dummy_npm_and_deno_module/blob/master/package.json) for a configuration example.
 
 ## Building
 
