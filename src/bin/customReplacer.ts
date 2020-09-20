@@ -31,13 +31,12 @@ makeThisModuleAnExecutableReplacer(async ({
     //We expect:import * as xxxx from "..."
     assert(!!match);
 
-    return `import { leftPad as ${
-        match[1]
-        } } from "${
-        path.relative(
+    return `import { leftPad as ${match[1]
+        } } from "${path.relative(
             destDirPath,
             path.join(__dirname, "..", "..", "deno_dist", "tools", "leftPad.ts")
         )
+            .split(path.sep).join(path.posix.sep) //For windows compat (we dont want backslashes)
         }"`;
 
 });
