@@ -1,3 +1,3 @@
 
-export { Cat } from "./Cat";
+export type { Cat } from "./Cat";
 export * from "./Dog";

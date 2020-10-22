@@ -1,3 +1,3 @@
-export { Color } from "./Color.ts";
+export type { Color } from "./Color.ts";
 export * from "./Gender.ts";
-import { Size } from "./Size.ts"; export { Size };
+import type { Size } from "./Size.ts"; export type { Size };
