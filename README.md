@@ -151,7 +151,7 @@ in the node_modules folder at the time Denoify is run.
 
 ## Step 3: Edit `tsconfig.json`
 
-### Make sure you use the `"outDir"` compiler pption.
+### Make sure you use the `"outDir"` compiler option.
 
 Denoify reads the `"outDir"` field of the `tsconfig.json` filed to determine where to put the de generated source so it must be completed.
 The typical value to use is: 
