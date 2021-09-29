@@ -257,9 +257,6 @@ const x=3; x;
 </details>
 
 
-
-
-
 ## Step 4: Edit your `npm` scripts
 
 First off, run `$ npm install --save-dev denoify` then add/edit the ``npm`` scripts:
@@ -274,6 +271,19 @@ First off, run `$ npm install --save-dev denoify` then add/edit the ``npm`` scri
     }
 ```
 
+
+## (OPTIONAL) Step 4.5: Specify the output directory
+
+If you don't want your deno distribution to be generated in the `deno_dist/`
+directory but rather in an other directory you can specify it in the `package.json`
+
+
+``package.json``:
+```json
+    "denoify": {
+        "out": "a/b/c/deno_lib"
+    }
+```
 
 ## Step 5: Chose what files you wish to include in the `deno_dist` directory.
 
