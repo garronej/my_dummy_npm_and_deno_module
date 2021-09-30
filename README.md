@@ -376,4 +376,4 @@ import { Cat } from "https://raw.githubusercontent.com/garronej/my_dummy_npm_an
 
 On top of that this module can now be used as a dependency in other modules that uses ``denoify``.
 
-If you want to avoid tracking the `deno_dist/` directory and automates the publishing process checkout [denoify_ci](https://github.com/garronej/denoify_ci)
+If you want to avoid tracking the `deno_dist/` directory and automates the publishing process checkout [tsafe](https://github.com/garronej/tsafe) CI setup.
