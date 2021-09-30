@@ -284,6 +284,17 @@ directory but rather in an other directory you can specify it in the `package.js
         "out": "a/b/c/deno_lib"
     }
 ```
+## (OPTIONAL) Step 4.75: Specify where the index.ts is located in your source.
+
+In some project configuration denoify fails to locate where the `index.ts` is located.  
+You can specify it explicitly like so:
+
+``package.json``:
+```json
+    "denoify": {
+        "index": "src/lib/index.ts"
+    }
+```
 
 ## Step 5: Chose what files you wish to include in the `deno_dist` directory.
 
