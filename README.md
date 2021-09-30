@@ -62,7 +62,7 @@ All the dev dependencies can be ignored as they are not required to actually run
   a Deno counterpart ( [`hash.deno.ts`](https://github.com/garronej/denoify/tree/master/src/lib/hash.deno.ts) ) so we do not need
   a Deno port for this dependency.
 
-- `react`, `react-dom` and `ipaddr.js`
+- `react` and `react-dom`
   Denoify has builtin import statement replacer for these modules. We do not need to specify any custom port. 
   To know if a module is supported by default by Denoify you can check if there if there is [a import statement replacer for it](https://github.com/garronej/denoify/tree/master/src/bin/replacer) 
   or if the module name is present in the [known-ports.json](https://github.com/garronej/denoify/blob/master/known-ports.jsonc) file.

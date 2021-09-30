@@ -28,8 +28,6 @@ console.log(cat.pathJoin(".", "path", "to", "file.txt"));
 
 }
 
-console.log(cat.getIpV4Octets("192.168.1.1"));
-
 console.log(cat.dummyRender());
 
 console.log(`Left pad 10: =>${cat.testLeftPadWith10("abcd")}<=`);

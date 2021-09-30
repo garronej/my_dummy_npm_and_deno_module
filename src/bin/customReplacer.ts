@@ -1,7 +1,7 @@
 // @denoify-ignore
 
 import { makeThisModuleAnExecutableReplacer } from "denoify";
-import { assert } from "evt/tools/typeSafety";
+import { assert } from "tsafe";
 import * as path from "path";
 
 makeThisModuleAnExecutableReplacer(async ({

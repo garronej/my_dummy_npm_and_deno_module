@@ -56,7 +56,6 @@ var js_yaml_1 = require("js-yaml");
 var ts_md5_1 = require("ts-md5");
 var path = require("path");
 var events_1 = require("events");
-var ipaddr = require("ipaddr.js");
 var dummyRender_1 = require("./dummyRender");
 var lp = require("left-pad");
 var hash_1 = require("./hash");
@@ -113,9 +112,6 @@ var Cat = /** @class */ (function (_super) {
     };
     Cat.prototype.makeSound = function () {
         this.emit("sound", "meow");
-    };
-    Cat.prototype.getIpV4Octets = function (ip) {
-        return ipaddr.IPv4.parse(ip).octets;
     };
     Cat.prototype.dummyRender = function () {
         return dummyRender_1.dummyRender({ "foo": "Hello Isomorphic React" });

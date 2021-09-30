@@ -12,7 +12,6 @@ export declare class Cat extends EventEmitter implements interfaces.Cat {
     spell2: (alphabet: [string], letter: string) => Promise<void>;
     pathJoin(...args: string[]): string;
     makeSound(): void;
-    getIpV4Octets(ip: string): number[];
     dummyRender(): string;
     testLeftPadWith10(str: string): string;
 }

@@ -58,11 +58,11 @@ All the dev dependencies can be ignored as they are not required to actually run
   generating the Deno distribution.
 
 - `sha3`
-  The module is only used a file ( [`hash.ts`](https://github.com/garronej/denoify/tree/master/src/lib/hash.ts) ) that has 
+  The module is only used in a file ( [`hash.ts`](https://github.com/garronej/denoify/tree/master/src/lib/hash.ts) ) that has 
   a Deno counterpart ( [`hash.deno.ts`](https://github.com/garronej/denoify/tree/master/src/lib/hash.deno.ts) ) so we do not need
   a Deno port for this dependency.
 
-- `react`, `react-dom` and `ipaddr.js`
+- `react` and `react-dom`
   Denoify has builtin import statement replacer for these modules. We do not need to specify any custom port. 
   To know if a module is supported by default by Denoify you can check if there if there is [a import statement replacer for it](https://github.com/garronej/denoify/tree/master/src/bin/replacer) 
   or if the module name is present in the [known-ports.json](https://github.com/garronej/denoify/blob/master/known-ports.jsonc) file.
@@ -151,7 +151,7 @@ in the node_modules folder at the time Denoify is run.
 
 ## Step 3: Edit `tsconfig.json`
 
-### Make sure you use the `"outDir"` compiler pption.
+### Make sure you use the `"outDir"` compiler option.
 
 Denoify reads the `"outDir"` field of the `tsconfig.json` filed to determine where to put the de generated source so it must be completed.
 The typical value to use is: 
@@ -257,9 +257,6 @@ const x=3; x;
 </details>
 
 
-
-
-
 ## Step 4: Edit your `npm` scripts
 
 First off, run `$ npm install --save-dev denoify` then add/edit the ``npm`` scripts:
@@ -274,6 +271,30 @@ First off, run `$ npm install --save-dev denoify` then add/edit the ``npm`` scri
     }
 ```
 
+
+## (OPTIONAL) Step 4.5: Specify the output directory
+
+If you don't want your deno distribution to be generated in the `deno_dist/`
+directory but rather in an other directory you can specify it in the `package.json`
+
+
+``package.json``:
+```json
+    "denoify": {
+        "out": "a/b/c/deno_lib"
+    }
+```
+## (OPTIONAL) Step 4.75: Specify where the index.ts is located in your source.
+
+In some project configuration denoify fails to locate where the `index.ts` is located.  
+You can specify it explicitly like so:
+
+``package.json``:
+```json
+    "denoify": {
+        "index": "src/lib/index.ts"
+    }
+```
 
 ## Step 5: Chose what files you wish to include in the `deno_dist` directory.
 
@@ -300,7 +321,7 @@ Note that in this repo we run the tests with the ``--allow-read`` because we use
 
 ## Create a new GitHub release every time you publish on npm.
 
-Just after running ``$ npm publish`` got to your GitHub repo pages -> release -> create new release ( or draft new release ) and tag version enter ``v0.4.1`` matching the current version in your ``package.json`` file.
+Just after running ``$ npm publish`` got to your GitHub repo pages -> release -> create new release ( or draft new release ) and tag version enter ``v0.4.2`` matching the current version in your ``package.json`` file.
 
 ## (Optional) Publish your module on deno.land
 
@@ -357,13 +378,13 @@ import { Cat } from "my-dummy-npm-and-deno-module"
 And on deno with:
 
 ```typescript
-import { Cat } from "https://deno.land/x/my_dummy_npm_and_deno_module@v0.4.1/mod.ts";
+import { Cat } from "https://deno.land/x/my_dummy_npm_and_deno_module@v0.4.2/mod.ts";
 ```
 or if you haven't published on [deno.land/x](https://deno.land/x):
 ```typescript
-import { Cat } from "https://raw.githubusercontent.com/garronej/my_dummy_npm_and_deno_module/v0.4.1/deno_dist/mod.ts";
+import { Cat } from "https://raw.githubusercontent.com/garronej/my_dummy_npm_and_deno_module/v0.4.2/deno_dist/mod.ts";
 ```
 
 On top of that this module can now be used as a dependency in other modules that uses ``denoify``.
 
-If you want to avoid tracking the `deno_dist/` directory and automates the publishing process checkout [denoify_ci](https://github.com/garronej/denoify_ci)
+If you want to avoid tracking the `deno_dist/` directory and automates the publishing process checkout [tsafe](https://github.com/garronej/tsafe) CI setup.

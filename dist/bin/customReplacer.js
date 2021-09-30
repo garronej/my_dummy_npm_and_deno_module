@@ -38,7 +38,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 exports.__esModule = true;
 var denoify_1 = require("denoify");
-var typeSafety_1 = require("evt/tools/typeSafety");
+var tsafe_1 = require("tsafe");
 var path = require("path");
 denoify_1.makeThisModuleAnExecutableReplacer(function (_a) {
     var parsedImportExportStatement = _a.parsedImportExportStatement, destDirPath = _a.destDirPath;
@@ -57,11 +57,11 @@ denoify_1.makeThisModuleAnExecutableReplacer(function (_a) {
              *export * from "..."
              *in our code.
              */
-            typeSafety_1.assert(!parsedImportExportStatement.isAsyncImport &&
+            tsafe_1.assert(!parsedImportExportStatement.isAsyncImport &&
                 parsedImportExportStatement.statementType === "import");
             match = (_b = parsedImportExportStatement.target) === null || _b === void 0 ? void 0 : _b.match(/^\*\s+as\s+(.*)$/);
             //We expect:import * as xxxx from "..."
-            typeSafety_1.assert(!!match);
+            tsafe_1.assert(!!match);
             return [2 /*return*/, "import { leftPad as " + match[1] + " } from \"" + path.relative(destDirPath, path.join(__dirname, "..", "..", "deno_dist", "tools", "leftPad.ts"))
                     .split(path.sep).join(path.posix.sep) //For windows compat (we dont want backslashes)
                  + "\""];
