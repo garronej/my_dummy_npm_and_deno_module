@@ -9,9 +9,6 @@ makeThisModuleAnExecutableReplacer(async ({
     destDirPath
 }) => {
 
-    if (parsedImportExportStatement.parsedArgument.nodeModuleName !== "left-pad") {
-    }
-
     switch (parsedImportExportStatement.parsedArgument.nodeModuleName) {
         case "left-pad": {
 

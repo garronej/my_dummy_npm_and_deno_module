@@ -46,8 +46,6 @@ denoify_1.makeThisModuleAnExecutableReplacer(function (_a) {
         var match;
         var _b;
         return __generator(this, function (_c) {
-            if (parsedImportExportStatement.parsedArgument.nodeModuleName !== "left-pad") {
-            }
             switch (parsedImportExportStatement.parsedArgument.nodeModuleName) {
                 case "left-pad":
                     {
