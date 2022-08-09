@@ -5,6 +5,15 @@ A demo project that serve as a tutorial on how to setup [Denoify](https://github
 NOTE: For a new module name favor '\_' over '-' in the module name as it is
 a deno requirement not to use '\_'
 
+## Play
+
+```bash
+git clone https://github.com/garronej/my_dummy_npm_and_deno_module
+cd my_dummy_npm_and_deno_module
+npm install
+npm run build
+```
+
 ## Step 1: Dealing with unsupported Node builtins
 
 As mentioned [the support for Node builtins](https://deno.land/std@0.65.0/node) is incomplete. 
@@ -60,7 +69,7 @@ All the dev dependencies can be ignored as they are not required to actually run
 - `sha3`
   The module is only used in a file ( [`hash.ts`](https://github.com/garronej/denoify/tree/master/src/lib/hash.ts) ) that has 
   a Deno counterpart ( [`hash.deno.ts`](https://github.com/garronej/denoify/tree/master/src/lib/hash.deno.ts) ) so we do not need
-  a Deno port for this dependency.
+  a Deno port for this dependency. See another exmple in [this issue](https://github.com/garronej/denoify/issues/39).  
 
 - `react` and `react-dom`
   Denoify has builtin import statement replacer for these modules. We do not need to specify any custom port. 
