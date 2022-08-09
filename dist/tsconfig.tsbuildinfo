@@ -151,6 +151,136 @@
         "signature": "0fbc21539ff733c5e5b5ad06d52bbf0a4ab73e6be46c947317e2f0d359e995d9",
         "affectsGlobalScope": false
       },
+      "../node_modules/denoify/node_modules/tsafe/assert.d.ts": {
+        "version": "45c6a1da6b1d86c3171f7e3392f31d4255b29e7828c1f8d520d6bc5ec6bb5213",
+        "signature": "45c6a1da6b1d86c3171f7e3392f31d4255b29e7828c1f8d520d6bc5ec6bb5213",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/denoify/node_modules/tsafe/exclude.d.ts": {
+        "version": "0671e930cb5a233fadcb68400874a859018113551c24576472487715129e3be6",
+        "signature": "0671e930cb5a233fadcb68400874a859018113551c24576472487715129e3be6",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/denoify/node_modules/tsafe/flip.d.ts": {
+        "version": "d723b6860c60ddf27bf4a2df11a3a186583babceec5eba04640df9a755507421",
+        "signature": "d723b6860c60ddf27bf4a2df11a3a186583babceec5eba04640df9a755507421",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/denoify/node_modules/tsafe/id.d.ts": {
+        "version": "b1073be090b6c314e7df2178dd8cee08b737bc3e97b455bbcdf4bdc4c1fc59da",
+        "signature": "b1073be090b6c314e7df2178dd8cee08b737bc3e97b455bbcdf4bdc4c1fc59da",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/denoify/node_modules/tsafe/ispromiselike.d.ts": {
+        "version": "18f455507ad251d2e04fa76dc6e2a7ccb090329c092913fca6197c5fef5d19eb",
+        "signature": "18f455507ad251d2e04fa76dc6e2a7ccb090329c092913fca6197c5fef5d19eb",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/denoify/node_modules/tsafe/methodnames.d.ts": {
+        "version": "8b292a4630d330672598f7ca55fadbbfb1f98f781401ffdb228f190d73ff1866",
+        "signature": "8b292a4630d330672598f7ca55fadbbfb1f98f781401ffdb228f190d73ff1866",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/denoify/node_modules/tsafe/objectkeys.d.ts": {
+        "version": "0074b2c395fdd7241199a53b6b5a04c56af5a56366c9108491ea3a07676f364b",
+        "signature": "0074b2c395fdd7241199a53b6b5a04c56af5a56366c9108491ea3a07676f364b",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/denoify/node_modules/tsafe/parameters.d.ts": {
+        "version": "cfff8633ad2408176f5d5e95958af23e2b6cde6c080ff8eb1a7f15bb9796445d",
+        "signature": "cfff8633ad2408176f5d5e95958af23e2b6cde6c080ff8eb1a7f15bb9796445d",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/denoify/node_modules/tsafe/param0.d.ts": {
+        "version": "847ba7de53da6350fd4bb997527f2caedc234693c250ebaa0957b529da523ff2",
+        "signature": "847ba7de53da6350fd4bb997527f2caedc234693c250ebaa0957b529da523ff2",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/denoify/node_modules/tsafe/pickoptionals.d.ts": {
+        "version": "3771469f37c11e63be6228ab7372549938b20e9eb4d45fa8d238edac4212becd",
+        "signature": "3771469f37c11e63be6228ab7372549938b20e9eb4d45fa8d238edac4212becd",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/denoify/node_modules/tsafe/returntype.d.ts": {
+        "version": "bc8c1a3d708f9c46120b9d168f8e916e09304a0a8e2b41394cdc97278128448a",
+        "signature": "bc8c1a3d708f9c46120b9d168f8e916e09304a0a8e2b41394cdc97278128448a",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/denoify/node_modules/tsafe/typeguard.d.ts": {
+        "version": "5bb1f84b59523bb590af00c91dbe1d0d13502d8f5d69d20a1f44859fdc1f23b3",
+        "signature": "5bb1f84b59523bb590af00c91dbe1d0d13502d8f5d69d20a1f44859fdc1f23b3",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/denoify/node_modules/tsafe/unpackpromise.d.ts": {
+        "version": "b5dacaad704b263b9e3a9db0f19e3ea1f0512dee9cd3cc438ac0d37735ea7d96",
+        "signature": "b5dacaad704b263b9e3a9db0f19e3ea1f0512dee9cd3cc438ac0d37735ea7d96",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/denoify/node_modules/tsafe/is.d.ts": {
+        "version": "d857125e272ccce6eddf49ec21fda452719f89ba62e52a46183437f1128ab46b",
+        "signature": "d857125e272ccce6eddf49ec21fda452719f89ba62e52a46183437f1128ab46b",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/denoify/node_modules/tsafe/tools/unite.d.ts": {
+        "version": "a2e198f8ad6abb2a84fd4bb682299dd9b92223bfd96b772ee1e7303774fedc1d",
+        "signature": "a2e198f8ad6abb2a84fd4bb682299dd9b92223bfd96b772ee1e7303774fedc1d",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/denoify/node_modules/tsafe/tools/strictequals.d.ts": {
+        "version": "c3f09b7c555ff3355010b6f99e145c0a7f20d4c27e932fd74e7d5bac8a5ec926",
+        "signature": "c3f09b7c555ff3355010b6f99e145c0a7f20d4c27e932fd74e7d5bac8a5ec926",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/denoify/node_modules/tsafe/equals.d.ts": {
+        "version": "f0c74b356456bc05f0079bef79d2e66527fecdbb5f7ce9aea6eeeed7271e21f9",
+        "signature": "f0c74b356456bc05f0079bef79d2e66527fecdbb5f7ce9aea6eeeed7271e21f9",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/denoify/node_modules/tsafe/not.d.ts": {
+        "version": "178720571a62b55e4c4fde4c058820d0cbc98161b7b00b1729128fd84a9b52d2",
+        "signature": "178720571a62b55e4c4fde4c058820d0cbc98161b7b00b1729128fd84a9b52d2",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/denoify/node_modules/tsafe/objectentries.d.ts": {
+        "version": "2a8130c3f69c30fd968c832fa43b9c656535af008de3cbee84281602fcc392d9",
+        "signature": "2a8130c3f69c30fd968c832fa43b9c656535af008de3cbee84281602fcc392d9",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/denoify/node_modules/tsafe/objectfromentries.d.ts": {
+        "version": "5aef6cc2c9952a451d20da54eb51e4ad39c2bbad979076f15191204f766345c8",
+        "signature": "5aef6cc2c9952a451d20da54eb51e4ad39c2bbad979076f15191204f766345c8",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/denoify/node_modules/tsafe/noundefined.d.ts": {
+        "version": "4dde3a0c022816a842ebcaf7375b5e696736efd4836280377ec0aa0107879e4d",
+        "signature": "4dde3a0c022816a842ebcaf7375b5e696736efd4836280377ec0aa0107879e4d",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/denoify/node_modules/tsafe/reflect.d.ts": {
+        "version": "85d2371b2f96b2dd6ec7aa5f2d5099d5d10a4b4c614914f2b531872f7bdb037a",
+        "signature": "85d2371b2f96b2dd6ec7aa5f2d5099d5d10a4b4c614914f2b531872f7bdb037a",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/denoify/node_modules/tsafe/index.d.ts": {
+        "version": "09cc226b6b864164cbb1665a3d2f1185532dbf59333daa6bbdbd21f99915380e",
+        "signature": "09cc226b6b864164cbb1665a3d2f1185532dbf59333daa6bbdbd21f99915380e",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/denoify/lib/types/parsedimportexportstatement.d.ts": {
+        "version": "0ece08ee74f3ba0c39e7d3922c418df97f38cc2984d4a7b17ccbca20a0c8ae2c",
+        "signature": "0ece08ee74f3ba0c39e7d3922c418df97f38cc2984d4a7b17ccbca20a0c8ae2c",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/denoify/lib/replacer.d.ts": {
+        "version": "8d4fd4b84aee97d2df3e26985e42b0520f1f2effeb34ff0f6de975039069f13a",
+        "signature": "8d4fd4b84aee97d2df3e26985e42b0520f1f2effeb34ff0f6de975039069f13a",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/denoify/lib/index.d.ts": {
+        "version": "2a51281c711e2b99cd1e2f1d361934237ac2c39b8d5b1f482399ee33d38eea21",
+        "signature": "2a51281c711e2b99cd1e2f1d361934237ac2c39b8d5b1f482399ee33d38eea21",
+        "affectsGlobalScope": false
+      },
       "../node_modules/tsafe/assert.d.ts": {
         "version": "45c6a1da6b1d86c3171f7e3392f31d4255b29e7828c1f8d520d6bc5ec6bb5213",
         "signature": "45c6a1da6b1d86c3171f7e3392f31d4255b29e7828c1f8d520d6bc5ec6bb5213",
@@ -244,21 +374,6 @@
       "../node_modules/tsafe/index.d.ts": {
         "version": "5387428fc785fcb17a25059274c6afffbbbd29f156bde010b6d03c3df6bac3ac",
         "signature": "5387428fc785fcb17a25059274c6afffbbbd29f156bde010b6d03c3df6bac3ac",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/denoify/lib/types/parsedimportexportstatement.d.ts": {
-        "version": "0ece08ee74f3ba0c39e7d3922c418df97f38cc2984d4a7b17ccbca20a0c8ae2c",
-        "signature": "0ece08ee74f3ba0c39e7d3922c418df97f38cc2984d4a7b17ccbca20a0c8ae2c",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/denoify/lib/replacer.d.ts": {
-        "version": "8d4fd4b84aee97d2df3e26985e42b0520f1f2effeb34ff0f6de975039069f13a",
-        "signature": "8d4fd4b84aee97d2df3e26985e42b0520f1f2effeb34ff0f6de975039069f13a",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/denoify/lib/index.d.ts": {
-        "version": "2a51281c711e2b99cd1e2f1d361934237ac2c39b8d5b1f482399ee33d38eea21",
-        "signature": "2a51281c711e2b99cd1e2f1d361934237ac2c39b8d5b1f482399ee33d38eea21",
         "affectsGlobalScope": false
       },
       "../src/bin/customreplacer.ts": {
@@ -791,13 +906,42 @@
       ],
       "../node_modules/denoify/lib/index.d.ts": [
         "../node_modules/denoify/lib/replacer.d.ts",
+        "../node_modules/denoify/node_modules/tsafe/index.d.ts",
         "../node_modules/denoify/tools/is404.d.ts",
         "../node_modules/denoify/tools/urljoin.d.ts",
-        "../node_modules/denoify/tools/version.d.ts",
-        "../node_modules/tsafe/index.d.ts"
+        "../node_modules/denoify/tools/version.d.ts"
       ],
       "../node_modules/denoify/lib/replacer.d.ts": [
         "../node_modules/denoify/lib/types/parsedimportexportstatement.d.ts"
+      ],
+      "../node_modules/denoify/node_modules/tsafe/equals.d.ts": [
+        "../node_modules/denoify/node_modules/tsafe/tools/strictequals.d.ts",
+        "../node_modules/denoify/node_modules/tsafe/tools/unite.d.ts"
+      ],
+      "../node_modules/denoify/node_modules/tsafe/index.d.ts": [
+        "../node_modules/denoify/node_modules/tsafe/assert.d.ts",
+        "../node_modules/denoify/node_modules/tsafe/equals.d.ts",
+        "../node_modules/denoify/node_modules/tsafe/exclude.d.ts",
+        "../node_modules/denoify/node_modules/tsafe/flip.d.ts",
+        "../node_modules/denoify/node_modules/tsafe/id.d.ts",
+        "../node_modules/denoify/node_modules/tsafe/is.d.ts",
+        "../node_modules/denoify/node_modules/tsafe/ispromiselike.d.ts",
+        "../node_modules/denoify/node_modules/tsafe/methodnames.d.ts",
+        "../node_modules/denoify/node_modules/tsafe/not.d.ts",
+        "../node_modules/denoify/node_modules/tsafe/noundefined.d.ts",
+        "../node_modules/denoify/node_modules/tsafe/objectentries.d.ts",
+        "../node_modules/denoify/node_modules/tsafe/objectfromentries.d.ts",
+        "../node_modules/denoify/node_modules/tsafe/objectkeys.d.ts",
+        "../node_modules/denoify/node_modules/tsafe/param0.d.ts",
+        "../node_modules/denoify/node_modules/tsafe/parameters.d.ts",
+        "../node_modules/denoify/node_modules/tsafe/pickoptionals.d.ts",
+        "../node_modules/denoify/node_modules/tsafe/reflect.d.ts",
+        "../node_modules/denoify/node_modules/tsafe/returntype.d.ts",
+        "../node_modules/denoify/node_modules/tsafe/typeguard.d.ts",
+        "../node_modules/denoify/node_modules/tsafe/unpackpromise.d.ts"
+      ],
+      "../node_modules/denoify/node_modules/tsafe/param0.d.ts": [
+        "../node_modules/denoify/node_modules/tsafe/parameters.d.ts"
       ],
       "../node_modules/denoify/tools/urljoin.d.ts": [
         "../node_modules/@types/node/path.d.ts"
@@ -1051,6 +1195,35 @@
       "../node_modules/denoify/lib/replacer.d.ts": [
         "../node_modules/denoify/lib/types/parsedimportexportstatement.d.ts"
       ],
+      "../node_modules/denoify/node_modules/tsafe/equals.d.ts": [
+        "../node_modules/denoify/node_modules/tsafe/tools/strictequals.d.ts",
+        "../node_modules/denoify/node_modules/tsafe/tools/unite.d.ts"
+      ],
+      "../node_modules/denoify/node_modules/tsafe/index.d.ts": [
+        "../node_modules/denoify/node_modules/tsafe/assert.d.ts",
+        "../node_modules/denoify/node_modules/tsafe/equals.d.ts",
+        "../node_modules/denoify/node_modules/tsafe/exclude.d.ts",
+        "../node_modules/denoify/node_modules/tsafe/flip.d.ts",
+        "../node_modules/denoify/node_modules/tsafe/id.d.ts",
+        "../node_modules/denoify/node_modules/tsafe/is.d.ts",
+        "../node_modules/denoify/node_modules/tsafe/ispromiselike.d.ts",
+        "../node_modules/denoify/node_modules/tsafe/methodnames.d.ts",
+        "../node_modules/denoify/node_modules/tsafe/not.d.ts",
+        "../node_modules/denoify/node_modules/tsafe/noundefined.d.ts",
+        "../node_modules/denoify/node_modules/tsafe/objectentries.d.ts",
+        "../node_modules/denoify/node_modules/tsafe/objectfromentries.d.ts",
+        "../node_modules/denoify/node_modules/tsafe/objectkeys.d.ts",
+        "../node_modules/denoify/node_modules/tsafe/param0.d.ts",
+        "../node_modules/denoify/node_modules/tsafe/parameters.d.ts",
+        "../node_modules/denoify/node_modules/tsafe/pickoptionals.d.ts",
+        "../node_modules/denoify/node_modules/tsafe/reflect.d.ts",
+        "../node_modules/denoify/node_modules/tsafe/returntype.d.ts",
+        "../node_modules/denoify/node_modules/tsafe/typeguard.d.ts",
+        "../node_modules/denoify/node_modules/tsafe/unpackpromise.d.ts"
+      ],
+      "../node_modules/denoify/node_modules/tsafe/param0.d.ts": [
+        "../node_modules/denoify/node_modules/tsafe/parameters.d.ts"
+      ],
       "../node_modules/denoify/tools/urljoin.d.ts": [
         "../node_modules/@types/node/path.d.ts"
       ],
@@ -1169,6 +1342,29 @@
       "../node_modules/denoify/lib/index.d.ts",
       "../node_modules/denoify/lib/replacer.d.ts",
       "../node_modules/denoify/lib/types/parsedimportexportstatement.d.ts",
+      "../node_modules/denoify/node_modules/tsafe/assert.d.ts",
+      "../node_modules/denoify/node_modules/tsafe/equals.d.ts",
+      "../node_modules/denoify/node_modules/tsafe/exclude.d.ts",
+      "../node_modules/denoify/node_modules/tsafe/flip.d.ts",
+      "../node_modules/denoify/node_modules/tsafe/id.d.ts",
+      "../node_modules/denoify/node_modules/tsafe/index.d.ts",
+      "../node_modules/denoify/node_modules/tsafe/is.d.ts",
+      "../node_modules/denoify/node_modules/tsafe/ispromiselike.d.ts",
+      "../node_modules/denoify/node_modules/tsafe/methodnames.d.ts",
+      "../node_modules/denoify/node_modules/tsafe/not.d.ts",
+      "../node_modules/denoify/node_modules/tsafe/noundefined.d.ts",
+      "../node_modules/denoify/node_modules/tsafe/objectentries.d.ts",
+      "../node_modules/denoify/node_modules/tsafe/objectfromentries.d.ts",
+      "../node_modules/denoify/node_modules/tsafe/objectkeys.d.ts",
+      "../node_modules/denoify/node_modules/tsafe/param0.d.ts",
+      "../node_modules/denoify/node_modules/tsafe/parameters.d.ts",
+      "../node_modules/denoify/node_modules/tsafe/pickoptionals.d.ts",
+      "../node_modules/denoify/node_modules/tsafe/reflect.d.ts",
+      "../node_modules/denoify/node_modules/tsafe/returntype.d.ts",
+      "../node_modules/denoify/node_modules/tsafe/tools/strictequals.d.ts",
+      "../node_modules/denoify/node_modules/tsafe/tools/unite.d.ts",
+      "../node_modules/denoify/node_modules/tsafe/typeguard.d.ts",
+      "../node_modules/denoify/node_modules/tsafe/unpackpromise.d.ts",
       "../node_modules/denoify/tools/is404.d.ts",
       "../node_modules/denoify/tools/urljoin.d.ts",
       "../node_modules/denoify/tools/version.d.ts",

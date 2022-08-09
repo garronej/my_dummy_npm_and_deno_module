@@ -12,6 +12,12 @@ git clone https://github.com/garronej/my_dummy_npm_and_deno_module
 cd my_dummy_npm_and_deno_module
 npm install
 npm run build
+
+# Run the sample with node
+node dist/test/test1.js
+
+# Run the sample with Deno
+deno run --allow-read deno_dist/test/test1.ts
 ```
 
 ## Step 1: Dealing with unsupported Node builtins
