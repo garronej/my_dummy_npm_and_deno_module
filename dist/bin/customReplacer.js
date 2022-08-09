@@ -47,24 +47,30 @@ denoify_1.makeThisModuleAnExecutableReplacer(function (_a) {
         var _b;
         return __generator(this, function (_c) {
             if (parsedImportExportStatement.parsedArgument.nodeModuleName !== "left-pad") {
-                //The replacer should return undefined when we want to let denoify replace the statement 
-                return [2 /*return*/, undefined];
             }
-            /*
-             *We expect not to run against statements like
-             *import(..).then(...)
-             *or
-             *export * from "..."
-             *in our code.
-             */
-            tsafe_1.assert(!parsedImportExportStatement.isAsyncImport &&
-                parsedImportExportStatement.statementType === "import");
-            match = (_b = parsedImportExportStatement.target) === null || _b === void 0 ? void 0 : _b.match(/^\*\s+as\s+(.*)$/);
-            //We expect:import * as xxxx from "..."
-            tsafe_1.assert(!!match);
-            return [2 /*return*/, "import { leftPad as " + match[1] + " } from \"" + path.relative(destDirPath, path.join(__dirname, "..", "..", "deno_dist", "tools", "leftPad.ts"))
-                    .split(path.sep).join(path.posix.sep) //For windows compat (we dont want backslashes)
-                 + "\""];
+            switch (parsedImportExportStatement.parsedArgument.nodeModuleName) {
+                case "left-pad":
+                    {
+                        /*
+                         *We expect not to run against statements like
+                         *import(..).then(...)
+                         *or
+                         *export * from "..."
+                         *in our code.
+                         */
+                        tsafe_1.assert(!parsedImportExportStatement.isAsyncImport &&
+                            parsedImportExportStatement.statementType === "import");
+                        match = (_b = parsedImportExportStatement.target) === null || _b === void 0 ? void 0 : _b.match(/^\*\s+as\s+(.*)$/);
+                        //We expect:import * as xxxx from "..."
+                        tsafe_1.assert(!!match);
+                        return [2 /*return*/, "import { leftPad as " + match[1] + " } from \"" + path.relative(destDirPath, path.join(__dirname, "..", "..", "deno_dist", "tools", "leftPad.ts"))
+                                .split(path.sep).join(path.posix.sep) //For windows compat (we dont want backslashes)
+                             + "\""];
+                    }
+                    break;
+            }
+            //The replacer should return undefined when we want to let denoify replace the statement 
+            return [2 /*return*/, undefined];
         });
     });
 });

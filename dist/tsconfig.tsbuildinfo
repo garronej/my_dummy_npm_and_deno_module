@@ -377,7 +377,7 @@
         "affectsGlobalScope": false
       },
       "../src/bin/customreplacer.ts": {
-        "version": "76f5e11d9e2a4fbbef7768f93d3155aa12dcf79aa23ab9c5db1ce92ea15537d9",
+        "version": "b18c8e9a425615c0dc982bf1eac4e343cafc5f8b308acb4922b425ff28dea47b",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
         "affectsGlobalScope": false
       },
