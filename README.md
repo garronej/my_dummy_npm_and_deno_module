@@ -5,6 +5,21 @@ A demo project that serve as a tutorial on how to setup [Denoify](https://github
 NOTE: For a new module name favor '\_' over '-' in the module name as it is
 a deno requirement not to use '\_'
 
+## Play
+
+```bash
+git clone https://github.com/garronej/my_dummy_npm_and_deno_module
+cd my_dummy_npm_and_deno_module
+npm install
+npm run build
+
+# Run the sample with node
+node dist/test/test1.js
+
+# Run the sample with Deno
+deno run --allow-read deno_dist/test/test1.ts
+```
+
 ## Step 1: Dealing with unsupported Node builtins
 
 As mentioned [the support for Node builtins](https://deno.land/std@0.65.0/node) is incomplete. 
