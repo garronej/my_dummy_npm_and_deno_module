@@ -34,7 +34,6 @@
             }
         ]
     },
-    "denoifyReplacer": "dist/bin/customReplacer.js",
     "scripts": {
         "build": "tsc && denoify",
         "test:node": "node dist/test/",
