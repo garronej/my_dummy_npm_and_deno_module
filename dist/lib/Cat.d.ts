@@ -7,7 +7,7 @@ export declare class Cat extends EventEmitter implements interfaces.Cat {
     gender: "FEMALE";
     size: "SMALL";
     testJsYaml(): any;
-    testHash(type: "sha256" | "sha3" | "md5"): string | Int32Array;
+    testHash(type: "sha256" | "sha3" | "md5"): string;
     spell: (alphabet: [string], letter: string) => Promise<void>;
     spell2: (alphabet: [string], letter: string) => Promise<void>;
     pathJoin(...args: string[]): string;

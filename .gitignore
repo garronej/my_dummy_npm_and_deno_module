@@ -38,3 +38,6 @@ jspm_packages
 
 dist/test
 .vscode
+# It's genereated when linking but we use package-lock.json in this demo repo
+# for being as agnostic as possible.
+/yarn.lock 
