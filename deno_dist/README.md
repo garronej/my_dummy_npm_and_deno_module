@@ -17,7 +17,7 @@ npm run build
 node dist/test/test1.js
 
 # Run the sample with Deno
-deno run --allow-read deno_dist/test/test1.ts
+deno run --allow-read --allow-env deno_dist/test/test1.ts
 ```
 
 ## Step 1: Dealing with unsupported Node builtins

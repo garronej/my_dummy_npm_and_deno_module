@@ -37,7 +37,7 @@
     "scripts": {
         "build": "tsc && denoify",
         "test:node": "node dist/test/",
-        "test:deno": "deno run --unstable --reload --allow-read deno_dist/test/deno_index.ts",
+        "test:deno": "deno run --unstable --reload --allow-read --allow-env deno_dist/test/deno_index.ts",
         "test": "npm run test:node && npm run test:deno"
     },
     "devDependencies": {
@@ -46,7 +46,7 @@
         "@types/react": "^16.9.46",
         "@types/react-dom": "^16.9.8",
         "colors": "^1.4.0",
-        "denoify": "^0.12.0",
+        "denoify": "^0.14.1",
         "tsafe": "^0.8.0",
         "typescript": "^3.9.3"
     }
