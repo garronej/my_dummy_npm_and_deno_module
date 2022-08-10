@@ -73,9 +73,9 @@ All the dev dependencies can be ignored as they are not required to actually run
   generating the Deno distribution.
 
 - `sha3`
-  The module is only used in a file ( [`hash.ts`](https://github.com/garronej/denoify/tree/master/src/lib/hash.ts) ) that has 
-  a Deno counterpart ( [`hash.deno.ts`](https://github.com/garronej/denoify/tree/master/src/lib/hash.deno.ts) ) so we do not need
-  a Deno port for this dependency. See another exmple in [this issue](https://github.com/garronej/denoify/issues/39).  
+  The module is only used in a file ( [`hash.ts`](https://github.com/garronej/my_dummy_npm_and_deno_module/blob/master/src/lib/hash.ts) ) that has 
+  a Deno counterpart ( [`hash.deno.ts`](https://github.com/garronej/my_dummy_npm_and_deno_module/blob/master/src/lib/hash.deno.ts) ) so we do not need
+  a Deno port for this dependency. See another example in [this issue](https://github.com/garronej/denoify/issues/39).  
 
 - `react` and `react-dom`
   Denoify has builtin import statement replacer for these modules. We do not need to specify any custom port. 
