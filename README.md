@@ -1,6 +1,19 @@
+
+<p align="center">
+    <i>A demo project published on NPM and Deno.land that serve as a tutorial on how to setup <a href="https://github.com/garronej/denoify">Denoify</a></i>
+    <br >
+    <br>
+    <a href="https://www.npmjs.com/package/my-dummy-npm-and-deno-module">
+      <img src="https://img.shields.io/npm/v/my-dummy-npm-and-deno-module.svg">
+    </a>
+    <a href="https://deno.land/x/my_dummy_npm_and_deno_module">
+        <img src="https://img.shields.io/badge/deno-module-informational?logo=deno">
+    </a>
+</p>
+
 # my-dummy-npm-and-deno-module
 
-A demo project that serve as a tutorial on how to setup [Denoify](https://github.com/garronej/denoify).
+
 
 NOTE: For a new module name favor '\_' over '-' in the module name as it is
 a deno requirement not to use '\_'
