@@ -4,7 +4,7 @@
     <br >
     <br>
     <a href="https://www.npmjs.com/package/my-dummy-npm-and-deno-module">
-      <img src="https://img.shields.io/npm/v/my-dummy-npm-and-deno-module.svg">
+      <img src="https://img.shields.io/npm/v/my-dummy-npm-and-deno-module?logo=npm">
     </a>
     <a href="https://deno.land/x/my_dummy_npm_and_deno_module">
         <img src="https://img.shields.io/badge/deno-module-informational?logo=deno">
