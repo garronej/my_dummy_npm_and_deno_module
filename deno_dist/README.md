@@ -1,6 +1,19 @@
+
+<p align="center">
+    <i>A demo project published on NPM and Deno.land that serve as a tutorial on how to setup <a href="https://github.com/garronej/denoify">Denoify</a></i>
+    <br >
+    <br>
+    <a href="https://www.npmjs.com/package/my-dummy-npm-and-deno-module">
+      <img src="https://img.shields.io/npm/v/my-dummy-npm-and-deno-module?logo=npm">
+    </a>
+    <a href="https://deno.land/x/my_dummy_npm_and_deno_module">
+        <img src="https://img.shields.io/badge/deno-module-informational?logo=deno">
+    </a>
+</p>
+
 # my-dummy-npm-and-deno-module
 
-A demo project that serve as a tutorial on how to setup [Denoify](https://github.com/garronej/denoify).
+
 
 NOTE: For a new module name favor '\_' over '-' in the module name as it is
 a deno requirement not to use '\_'
@@ -336,7 +349,7 @@ Note that in this repo we run the tests with the ``--allow-read`` because we use
 
 ## Create a new GitHub release every time you publish on npm.
 
-Just after running ``$ npm publish`` got to your GitHub repo pages -> release -> create new release ( or draft new release ) and tag version enter ``v0.4.3`` matching the current version in your ``package.json`` file.
+Just after running ``$ npm publish`` got to your GitHub repo pages -> release -> create new release ( or draft new release ) and tag version enter ``v0.4.4`` matching the current version in your ``package.json`` file.
 
 ## (Optional) Publish your module on deno.land
 
@@ -393,11 +406,11 @@ import { Cat } from "my-dummy-npm-and-deno-module"
 And on deno with:
 
 ```typescript
-import { Cat } from "https://deno.land/x/my_dummy_npm_and_deno_module@v0.4.3/mod.ts";
+import { Cat } from "https://deno.land/x/my_dummy_npm_and_deno_module@v0.4.4/mod.ts";
 ```
 or if you haven't published on [deno.land/x](https://deno.land/x):
 ```typescript
-import { Cat } from "https://raw.githubusercontent.com/garronej/my_dummy_npm_and_deno_module/v0.4.3/deno_dist/mod.ts";
+import { Cat } from "https://raw.githubusercontent.com/garronej/my_dummy_npm_and_deno_module/v0.4.4/deno_dist/mod.ts";
 ```
 
 On top of that this module can now be used as a dependency in other modules that uses ``denoify``.
