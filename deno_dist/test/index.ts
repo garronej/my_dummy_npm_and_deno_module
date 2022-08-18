@@ -6,7 +6,7 @@ import "../lib/index.ts";
 import * as fs from "https://deno.land/std@0.152.0/node/url.ts"; fs;
 
 //colors is in dev dependency so denoify will not throw throws when it came across it.
-import "colors DENOIFY: DEPENDENCY UNMET (DEV DEPENDENCY)"
+import "npm:colors@1.4.0"
 
 import "./test1.ts";
 

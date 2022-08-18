@@ -13,8 +13,6 @@
 
 # my-dummy-npm-and-deno-module
 
-
-
 NOTE: For a new module name favor '\_' over '-' in the module name as it is
 a deno requirement not to use '\_'
 
@@ -33,19 +31,12 @@ node dist/test/test1.js
 deno run --allow-read --allow-env deno_dist/test/test1.ts
 ```
 
-## Step 1: Dealing with unsupported Node builtins
+## Step 1: Using `.deno.ts` where needed
 
-As mentioned [the support for Node builtins](https://deno.land/std@0.65.0/node) is incomplete. 
-Many important modules like `net` or `https` are not currently available.  
-To make the matter worse you might run into some issues even with the module that are supposed
-to be supported as some port are incomplete and some types definition mismatches `@types/node`.  
+If Denoify fails to transpile some file of your codebase the solution is to wrap the problematic 
+API inside a separate module and provide a custom implementation for Deno.
 
-The solution is to wrap the problematic API inside a separate module and provide a custom implementation
-for Deno.
-
-Let's say we need to compute a `sha256` hash. When we check in the [compatibility list](https://deno.land/std@0.65.0/node) 
-we can see that the node builtin `crypto` is not yet supported. 
-So what we do is we create [`hash.ts`](https://github.com/garronej/denoify/tree/master/src/lib/hash.ts) file where we put: 
+Let's say we have this file `hash.ts` that fails to transpile to Deno (in reality it transpile successfully but let's assume it doesn't): 
 
 ```typescript
 import * as crypto from "crypto";
@@ -58,7 +49,7 @@ export function sha256(input: string): string {
 }
 ```
 
-And a another file [`hash.deno.ts`](https://github.com/garronej/denoify/tree/master/src/lib/hash.deno.ts) exposing the same function but with a Deno implementation:  
+We can create a `hash.deno.ts` file alongside `hash.ts` that exports the same API:  
 
 ```typescript
 import { Sha256 } from "https://deno.land/std@0.65.0/hash/sha256.ts";
@@ -72,8 +63,12 @@ export function sha256(input: string): string {
 }
 ```
 
+## Step 2: Dealing with your dependencies
 
-## Step 2: Enabling the module's hard dependencies to run on Deno
+Mostly deprecated since [Deno now supports NPM modules](https://deno.com/blog/changes#compatibility-with-node-and-npm).  
+
+<details>
+  <summary>Click to expand</summary>
 
 We need to examine one by one all the module listed as `dependencies` in the `package.json`
 and provide a Deno port for the modules that requires it.
@@ -176,6 +171,7 @@ import ReactDOMServer from "https://dev.jspm.io/react-dom@16.13.1/server.js";
 The replacer that makes this happen can be found [here](https://github.com/garronej/denoify/blob/master/src/bin/replacer/react-dom.ts). The version number that is passed to the replacer is the version number of the module installed 
 in the node_modules folder at the time Denoify is run.
 
+</details>
 
 ## Step 3: Edit `tsconfig.json`
 

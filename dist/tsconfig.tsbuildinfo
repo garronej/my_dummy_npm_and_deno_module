@@ -426,9 +426,24 @@
         "signature": "10421aeac92bbd8f046392c58583d0e2619ec1a4bd1f3f83c4225bb9617e7cda",
         "affectsGlobalScope": false
       },
-      "../node_modules/ts-md5/dist/md5.d.ts": {
-        "version": "dd31f72965c976ef914db703242353678c50d8e69209a68347cae5e50963a54a",
-        "signature": "dd31f72965c976ef914db703242353678c50d8e69209a68347cae5e50963a54a",
+      "../node_modules/ts-md5/dist/esm/md5.d.ts": {
+        "version": "36f0847ebd70c7bec743c9f943ce72931975378f2c5fc18556fca46bf3b713ac",
+        "signature": "36f0847ebd70c7bec743c9f943ce72931975378f2c5fc18556fca46bf3b713ac",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/ts-md5/dist/esm/md5_file_hasher.d.ts": {
+        "version": "eb59adf5142bd260ebb26c1e4d83b8cbf40d8a2bcee936d2ec4afc74f213a4b0",
+        "signature": "eb59adf5142bd260ebb26c1e4d83b8cbf40d8a2bcee936d2ec4afc74f213a4b0",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/ts-md5/dist/esm/parallel_hasher.d.ts": {
+        "version": "7aae7e846d2ee8b1c5e89f1b7de9e92a13928ece1be66b87d872d758df19e42e",
+        "signature": "7aae7e846d2ee8b1c5e89f1b7de9e92a13928ece1be66b87d872d758df19e42e",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/ts-md5/dist/esm/index.d.ts": {
+        "version": "9329ffd96c23ec5b96f59f57f9a798eefe8d1565de7fadda3a2ea354d1455159",
+        "signature": "9329ffd96c23ec5b96f59f57f9a798eefe8d1565de7fadda3a2ea354d1455159",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/react/global.d.ts": {
@@ -960,6 +975,11 @@
       "../node_modules/denoify/tools/urljoin.d.ts": [
         "../node_modules/@types/node/path.d.ts"
       ],
+      "../node_modules/ts-md5/dist/esm/index.d.ts": [
+        "../node_modules/ts-md5/dist/esm/md5.d.ts",
+        "../node_modules/ts-md5/dist/esm/md5_file_hasher.d.ts",
+        "../node_modules/ts-md5/dist/esm/parallel_hasher.d.ts"
+      ],
       "../node_modules/tsafe/equals.d.ts": [
         "../node_modules/tsafe/tools/strictequals.d.ts",
         "../node_modules/tsafe/tools/unite.d.ts"
@@ -996,7 +1016,7 @@
         "../node_modules/@types/node/path.d.ts",
         "../node_modules/left-pad/index.d.ts",
         "../node_modules/run-exclusive/lib/runexclusive.d.ts",
-        "../node_modules/ts-md5/dist/md5.d.ts",
+        "../node_modules/ts-md5/dist/esm/index.d.ts",
         "../src/lib/dummyrender.tsx",
         "../src/lib/hash.ts",
         "../src/lib/interfaces/index.ts"
@@ -1245,6 +1265,11 @@
       "../node_modules/denoify/tools/urljoin.d.ts": [
         "../node_modules/@types/node/path.d.ts"
       ],
+      "../node_modules/ts-md5/dist/esm/index.d.ts": [
+        "../node_modules/ts-md5/dist/esm/md5.d.ts",
+        "../node_modules/ts-md5/dist/esm/md5_file_hasher.d.ts",
+        "../node_modules/ts-md5/dist/esm/parallel_hasher.d.ts"
+      ],
       "../node_modules/tsafe/equals.d.ts": [
         "../node_modules/tsafe/tools/strictequals.d.ts",
         "../node_modules/tsafe/tools/unite.d.ts"
@@ -1391,7 +1416,10 @@
       "../node_modules/left-pad/index.d.ts",
       "../node_modules/run-exclusive/lib/runexclusive.d.ts",
       "../node_modules/sha3/index.d.ts",
-      "../node_modules/ts-md5/dist/md5.d.ts",
+      "../node_modules/ts-md5/dist/esm/index.d.ts",
+      "../node_modules/ts-md5/dist/esm/md5.d.ts",
+      "../node_modules/ts-md5/dist/esm/md5_file_hasher.d.ts",
+      "../node_modules/ts-md5/dist/esm/parallel_hasher.d.ts",
       "../node_modules/tsafe/assert.d.ts",
       "../node_modules/tsafe/equals.d.ts",
       "../node_modules/tsafe/exclude.d.ts",
