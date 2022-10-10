@@ -111,10 +111,12 @@ All the dev dependencies can be ignored as they are not required to actually run
 "dependencies": {
     "ts-md5": "^1.2.7"
 }
-"denoify": {
-    "ports": {
-        "ts-md5": "garronej/ts-md5"
-    }
+```  
+
+`.denoifyrc.json`:  
+```json
+"ports": {
+    "ts-md5": "garronej/ts-md5"
 }
 ```
 
@@ -126,12 +128,15 @@ All the dev dependencies can be ignored as they are not required to actually run
 "dependencies": {
     "js-yaml": "^3.13.1"
 },
-"denoify": {
-    "ports": {
-        "js-yaml": "https://deno.land/x/js_yaml_port/js-yaml.js"
-    }
+```  
+
+`.denoifyrc.json`:  
+```json
+"ports": {
+    "js-yaml": "https://deno.land/x/js_yaml_port/js-yaml.js"
 }
 ```
+
 Be aware though that only `deno.land/x` and `raw.githubusercontent.com` URLs are supported 
 and this will only work if the Deno port exposes exactly the same way the NPM module does.
 For example if the NPM module is supposed to be imported like that `import * as Xxx from "xxx"` but the Deno
@@ -159,10 +164,9 @@ that you don't want to manually replace.
 
 [see file](https://github.com/garronej/my_dummy_npm_and_deno_module/blob/master/src/bin/customReplacer.ts)
 
-`package.json`:
-You need to tell denoify where to find your replacer function.
+`.denoifyrc.json`: You need to tell denoify where to find your replacer function.
 ```json
-"denoify": {
+{
     "replacer": "dist/bin/customReplacer.js"
 }
 ```
@@ -299,7 +303,7 @@ First off, run `$ npm install --save-dev denoify` then add/edit the ``npm`` scri
 ``package.json``:
 ```json
     "devDependencies": {
-        "denoify": "^4.0.1",
+        "denoify": "^1.2.1",
     }
     "scripts": {
         "build": "tsc && denoify",
