@@ -33,11 +33,12 @@ deno run --allow-read --allow-env deno_dist/test/test1.ts
 
 ## Step 1: Using `.deno.ts` where needed
 
-If Denoify fails to transpile some file of your codebase the solution is to wrap the problematic 
-API inside a separate module and provide a custom implementation for Deno.
+If Denoify fails to transpile some files, or if the transpiled files fails at runtime
+this is how you should proceed, example:  
 
-Let's say we have this file `hash.ts` that fails to transpile to Deno (in reality it transpile successfully but let's assume it doesn't): 
+This file fails to transpile. (in reality in resent version of Deno it does but let's assume it doesn't): 
 
+`src/lib/hash.ts`
 ```typescript
 import * as crypto from "crypto";
 
@@ -49,8 +50,9 @@ export function sha256(input: string): string {
 }
 ```
 
-We can create a `hash.deno.ts` file alongside `hash.ts` that exports the same API:  
+We can create this file that export the same API but with a Deno native implementation.
 
+`src/lib/hash.deno.ts`
 ```typescript
 import { Sha256 } from "https://deno.land/std@0.65.0/hash/sha256.ts";
 
@@ -63,9 +65,18 @@ export function sha256(input: string): string {
 }
 ```
 
+The best approach is to start by a little refactor, extracting the specific bit that are problematic for 
+Deno in separate files and write `xxx.deno.ts` counterpart only for theses files.
+
+## Step 1.5: Using `// @denoify-ignore`  
+
+If you want Denoify to simply ignore some file in the transpilation you can add `// @denoify-ignore` at the top of the file.  
+Example [`src/bin/customReplacer.ts`](https://github.com/garronej/my_dummy_npm_and_deno_module/blob/master/src/bin/customReplacer.ts) is Denoify-ignored so there is no `deno_dist/bin/customReplacer.ts`.
+
 ## Step 2: Dealing with your dependencies
 
-Mostly deprecated since [Deno now supports NPM modules](https://deno.com/blog/changes#compatibility-with-node-and-npm).  
+You can skip this section if you are okay with relying on [deno experimental support for NPM modules](https://deno.com/blog/changes#compatibility-with-node-and-npm)
+or if you have provided a `xxx.deno.ts` specific implementation everywhere you use dependencies.  
 
 <details>
   <summary>Click to expand</summary>
