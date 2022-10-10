@@ -22,7 +22,7 @@ a deno requirement not to use '\_'
 git clone https://github.com/garronej/my_dummy_npm_and_deno_module
 cd my_dummy_npm_and_deno_module
 npm install
-npm run build
+npm run build # Some warning are expected. They are part of the tutorial.
 
 # Run the sample with node
 node dist/test/test1.js
@@ -310,25 +310,26 @@ First off, run `$ npm install --save-dev denoify` then add/edit the ``npm`` scri
 ## (OPTIONAL) Step 4.5: Specify the output directory
 
 If you don't want your deno distribution to be generated in the `deno_dist/`
-directory but rather in an other directory you can specify it in the `package.json`
+directory but rather in an other directory create a [`.denoifyrc.json`](https://github.com/garronej/my_dummy_npm_and_deno_module/blob/master/.denoifyrc.json) configuration
+file and use the `out` option.
 
 
-``package.json``:
+``.denoifyrc.json``:
 ```json
-    "denoify": {
-        "out": "a/b/c/deno_lib"
-    }
+{
+    "out": "a/b/c/deno_lib"
+}
 ```
 ## (OPTIONAL) Step 4.75: Specify where the index.ts is located in your source.
 
 In some project configuration denoify fails to locate where the `index.ts` is located.  
 You can specify it explicitly like so:
 
-``package.json``:
+``.denoifyrc.json``:
 ```json
-    "denoify": {
-        "index": "src/lib/index.ts"
-    }
+{
+    "index": "src/lib/index.ts"
+}
 ```
 
 ## Step 5: Chose what files you wish to include in the `deno_dist` directory.
@@ -339,12 +340,12 @@ denoify `includes` option:
 `package.json`
 
 ```json
-"denoify": {
+{
     "includes": [ ... ]
 }
 ```
 
-Have a look at the [`package.json`](https://github.com/garronej/my_dummy_npm_and_deno_module/blob/master/package.json) for a configuration example.
+Have a look at the [`.denoifyrc.json`](https://github.com/garronej/my_dummy_npm_and_deno_module/blob/master/.denoifyrc.json) of this repo for ans example.
 
 ## Building
 
