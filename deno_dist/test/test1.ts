@@ -1,4 +1,4 @@
-import { Buffer } from "https://deno.land/std@0.152.0/node/buffer.ts";
+import { Buffer } from "https://deno.land/std@0.159.0/node/buffer.ts";
 //Not actual tests, just a place for you to experiment with the tool. 
 
 import { Cat } from "../lib/index.ts";

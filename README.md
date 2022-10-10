@@ -22,7 +22,7 @@ a deno requirement not to use '\_'
 git clone https://github.com/garronej/my_dummy_npm_and_deno_module
 cd my_dummy_npm_and_deno_module
 npm install
-npm run build
+npm run build # Some warning are expected. They are part of the tutorial.
 
 # Run the sample with node
 node dist/test/test1.js

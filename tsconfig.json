@@ -8,10 +8,10 @@
         ],
         "declaration": true,
         "newLine": "LF",
-	"incremental": true, 
+        "incremental": true,
         "outDir": "dist/", // !important
         "noUnusedLocals": true, // !important
-	"noUnusedParameters": true, // !important
+        "noUnusedParameters": true, // !important
         "strict": true, // !important
         "jsx": "react"
     },
