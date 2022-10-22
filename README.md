@@ -7,7 +7,7 @@
       <img src="https://img.shields.io/npm/v/my-dummy-npm-and-deno-module?logo=npm">
     </a>
     <a href="https://deno.land/x/my_dummy_npm_and_deno_module">
-        <img src="https://img.shields.io/badge/deno-module-informational?logo=deno">
+        <img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fdeno-visualizer.danopia.net%2Fshields%2Flatest-version%2Fx%2Fmy_dummy_npm_and_deno_module%2Fmod.ts">
     </a>
 </p>
 
