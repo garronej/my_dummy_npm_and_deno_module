@@ -3,10 +3,12 @@ var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
         extendStatics(d, b);
         function __() { this.constructor = d; }
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
@@ -27,7 +29,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     function verb(n) { return function (v) { return step([n, v]); }; }
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
+        while (g && (g = 0, op[0] && (_ = 0)), _) try {
             if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
             if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
@@ -79,7 +81,7 @@ var Cat = /** @class */ (function (_super) {
                 }
             });
         }); });
-        _this.spell2 = runExclusive_1.buildMethod(function (alphabet, letter) { return __awaiter(_this, void 0, void 0, function () {
+        _this.spell2 = (0, runExclusive_1.buildMethod)(function (alphabet, letter) { return __awaiter(_this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0: return [4 /*yield*/, new Promise(function (resolve) { return setTimeout(function () { return resolve(); }, Math.random() * 100); })];
@@ -93,14 +95,14 @@ var Cat = /** @class */ (function (_super) {
         return _this;
     }
     Cat.prototype.testJsYaml = function () {
-        return js_yaml_1.load('hello: world');
+        return (0, js_yaml_1.load)('hello: world');
     };
     Cat.prototype.testHash = function (type) {
         var input = "Hello World";
         switch (type) {
             case "md5": return ts_md5_1.Md5.hashStr(input);
-            case "sha256": return hash_1.sha256(input);
-            case "sha3": return hash_1.sha3_512(input);
+            case "sha256": return (0, hash_1.sha256)(input);
+            case "sha3": return (0, hash_1.sha3_512)(input);
         }
     };
     Cat.prototype.pathJoin = function () {
@@ -114,7 +116,7 @@ var Cat = /** @class */ (function (_super) {
         this.emit("sound", "meow");
     };
     Cat.prototype.dummyRender = function () {
-        return dummyRender_1.dummyRender({ "foo": "Hello Isomorphic React" });
+        return (0, dummyRender_1.dummyRender)({ "foo": "Hello Isomorphic React" });
     };
     Cat.prototype.testLeftPadWith10 = function (str) {
         return lp(str, 10);

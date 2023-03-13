@@ -27,9 +27,9 @@ const __dirname = (() => {
 
 
 //Supported Note builtin are listed in known-ports.json ( denoify repo )
-import * as fs from "https://deno.land/std@0.159.0/node/fs.ts";
-import * as path from "https://deno.land/std@0.159.0/node/path.ts";
-import { TextDecoder } from "https://deno.land/std@0.159.0/node/util.ts";
+import * as fs from "node:fs";
+import * as path from "node:path";
+import { TextDecoder } from "node:util";
 
 export function getPackageJsonName(): string {
 

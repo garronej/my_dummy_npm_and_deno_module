@@ -15,7 +15,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     function verb(n) { return function (v) { return step([n, v]); }; }
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
+        while (g && (g = 0, op[0] && (_ = 0)), _) try {
             if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
             if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
@@ -40,7 +40,7 @@ exports.__esModule = true;
 var denoify_1 = require("denoify");
 var tsafe_1 = require("tsafe");
 var path = require("path");
-denoify_1.makeThisModuleAnExecutableReplacer(function (_a) {
+(0, denoify_1.makeThisModuleAnExecutableReplacer)(function (_a) {
     var parsedImportExportStatement = _a.parsedImportExportStatement, destDirPath = _a.destDirPath;
     return __awaiter(void 0, void 0, void 0, function () {
         var match;
@@ -56,14 +56,14 @@ denoify_1.makeThisModuleAnExecutableReplacer(function (_a) {
                          *export * from "..."
                          *in our code.
                          */
-                        tsafe_1.assert(!parsedImportExportStatement.isAsyncImport &&
+                        (0, tsafe_1.assert)(!parsedImportExportStatement.isAsyncImport &&
                             parsedImportExportStatement.statementType === "import");
                         match = (_b = parsedImportExportStatement.target) === null || _b === void 0 ? void 0 : _b.match(/^\*\s+as\s+(.*)$/);
                         //We expect:import * as xxxx from "..."
-                        tsafe_1.assert(!!match);
-                        return [2 /*return*/, "import { leftPad as " + match[1] + " } from \"" + path.relative(destDirPath, path.join(__dirname, "..", "..", "deno_dist", "tools", "leftPad.ts"))
+                        (0, tsafe_1.assert)(!!match);
+                        return [2 /*return*/, "import { leftPad as ".concat(match[1], " } from \"").concat(path.relative(destDirPath, path.join(__dirname, "..", "..", "deno_dist", "tools", "leftPad.ts"))
                                 .split(path.sep).join(path.posix.sep) //For windows compat (we dont want backslashes)
-                             + "\""];
+                            , "\"")];
                     }
                     break;
             }

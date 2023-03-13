@@ -1,1 +1,1 @@
-export declare type Color = "WHITE" | "BLACK";
+export type Color = "WHITE" | "BLACK";

@@ -1,11 +1,11 @@
 
 import * as interfaces from "./interfaces/index.ts";
-import * as runExclusive from "https://deno.land/x/run_exclusive@v2.2.16/mod.ts";
-import { buildMethod } from "https://deno.land/x/run_exclusive@v2.2.16/lib/runExclusive.ts";
+import * as runExclusive from "https://deno.land/x/run_exclusive@v2.2.18/mod.ts";
+import { buildMethod } from "https://deno.land/x/run_exclusive@v2.2.18/lib/runExclusive.ts";
 import { load } from "https://deno.land/x/js_yaml_port@3.14.0/js-yaml.js";
 import { Md5 } from "https://raw.githubusercontent.com/garronej/ts-md5/v1.2.7/deno_dist/mod.ts";
-import * as path from "https://deno.land/std@0.159.0/node/path.ts";
-import { EventEmitter } from "https://deno.land/std@0.159.0/node/events.ts";
+import * as path from "node:path";
+import { EventEmitter } from "node:events";
 import { dummyRender } from "./dummyRender.tsx";
 import { leftPad as lp } from "../tools/leftPad.ts";
 import { sha256, sha3_512 } from "./hash.ts";

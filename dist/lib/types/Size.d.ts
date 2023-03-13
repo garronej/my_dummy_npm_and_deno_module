@@ -1,1 +1,1 @@
-export declare type Size = "BIG" | "SMALL";
+export type Size = "BIG" | "SMALL";
