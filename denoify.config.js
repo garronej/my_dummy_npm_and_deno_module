@@ -5,7 +5,8 @@ const config = {
 	"replacer": "dist/bin/customReplacer.js",
 	"ports": {
 		"js-yaml": "https://deno.land/x/js_yaml_port/js-yaml.js",
-		"ts-md5": "garronej/ts-md5"
+		"ts-md5": "garronej/ts-md5",
+		"axios": "https://deno.land/x/axiod/mod.ts"
 	},
 	"includes": [
 		"README.md",

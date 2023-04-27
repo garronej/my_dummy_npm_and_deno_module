@@ -9,7 +9,10 @@ import { EventEmitter } from "node:events";
 import { dummyRender } from "./dummyRender.tsx";
 import { leftPad as lp } from "../tools/leftPad.ts";
 import { sha256, sha3_512 } from "./hash.ts";
+import axios from "https://deno.land/x/axiod@0.26.2/mod.ts";
 
+axios.get("https://google.fr")
+    .then(response => console.log(`Response from google.fr: ${response.status}`));
 
 console.assert(runExclusive.buildMethod === buildMethod );
 

@@ -28,7 +28,7 @@ npm run build # Some warning are expected. They are part of the tutorial.
 node dist/test/test1.js
 
 # Run the sample with Deno
-deno run --allow-read --allow-env deno_dist/test/test1.ts
+deno run --allow-read --allow-env --allow-net deno_dist/test/test1.ts
 ```
 
 ## Step 1: Using `.deno.ts` where needed

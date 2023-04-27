@@ -61,6 +61,9 @@ var events_1 = require("events");
 var dummyRender_1 = require("./dummyRender");
 var lp = require("left-pad");
 var hash_1 = require("./hash");
+var axios_1 = require("axios");
+axios_1["default"].get("https://google.fr")
+    .then(function (response) { return console.log("Response from google.fr: ".concat(response.status)); });
 console.assert(runExclusive.buildMethod === runExclusive_1.buildMethod);
 var Cat = /** @class */ (function (_super) {
     __extends(Cat, _super);

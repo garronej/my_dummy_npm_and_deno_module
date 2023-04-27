@@ -9,7 +9,10 @@ import { EventEmitter } from "events";
 import { dummyRender } from "./dummyRender";
 import * as lp from "left-pad";
 import { sha256, sha3_512 } from "./hash";
+import axios from "axios";
 
+axios.get("https://google.fr")
+    .then(response => console.log(`Response from google.fr: ${response.status}`));
 
 console.assert(runExclusive.buildMethod === buildMethod );
 
