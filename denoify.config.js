@@ -1,4 +1,7 @@
-{
+// @ts-check
+
+/** @type { import('denoify/lib/config/parseParams').DenoifyParams } */
+const config = {
 	"replacer": "dist/bin/customReplacer.js",
 	"ports": {
 		"js-yaml": "https://deno.land/x/js_yaml_port/js-yaml.js",
@@ -15,4 +18,6 @@
 			"destBasename": "renamed_foo.json"
 		}
 	]
-}
+ }
+ 
+ module.exports = config;
