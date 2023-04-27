@@ -28,7 +28,7 @@ npm run build # Some warning are expected. They are part of the tutorial.
 node dist/test/test1.js
 
 # Run the sample with Deno
-deno run --allow-read --allow-env deno_dist/test/test1.ts
+deno run --allow-read --allow-env --allow-net deno_dist/test/test1.ts
 ```
 
 ## Step 1: Using `.deno.ts` where needed
@@ -361,7 +361,7 @@ Note that in this repo we run the tests with the ``--allow-read`` because we use
 
 ## Create a new GitHub release every time you publish on npm.
 
-Just after running ``$ npm publish`` got to your GitHub repo pages -> release -> create new release ( or draft new release ) and tag version enter ``v1.0.1`` matching the current version in your ``package.json`` file.
+Just after running ``$ npm publish`` got to your GitHub repo pages -> release -> create new release ( or draft new release ) and tag version enter ``v1.0.2`` matching the current version in your ``package.json`` file.
 
 ## (Optional) Publish your module on deno.land
 
@@ -418,11 +418,11 @@ import { Cat } from "my-dummy-npm-and-deno-module"
 And on deno with:
 
 ```typescript
-import { Cat } from "https://deno.land/x/my_dummy_npm_and_deno_module@v1.0.1/mod.ts";
+import { Cat } from "https://deno.land/x/my_dummy_npm_and_deno_module@v1.0.2/mod.ts";
 ```
 or if you haven't published on [deno.land/x](https://deno.land/x):
 ```typescript
-import { Cat } from "https://raw.githubusercontent.com/garronej/my_dummy_npm_and_deno_module/v1.0.1/deno_dist/mod.ts";
+import { Cat } from "https://raw.githubusercontent.com/garronej/my_dummy_npm_and_deno_module/v1.0.2/deno_dist/mod.ts";
 ```
 
 On top of that this module can now be used as a dependency in other modules that uses ``denoify``.
